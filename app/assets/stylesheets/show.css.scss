@@ -1,11 +1,33 @@
-.heading-section h1{
-  text-align: center
+.title-section {
+  text-align: center;
+  text-transform: capitalize;
+}
+.title-section h1 {
+  font-weight: 90px;
+  padding: 10px;
 }
 
-.article-display{
-  width: 900px;
+.postArticle {
+  max-width: 70%;
+  margin: 15%;
+  margin-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  h1{
-text-align: center
+  h1 {
+    text-align: center;
+  }
+
+  .article-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain
+  }
+  .article-body {
+    margin-top: 38px;
+    margin-bottom: 30px;
+  }
+  .comment-section {
+    margin-top: 38px;
   }
 }

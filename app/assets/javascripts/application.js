@@ -19,3 +19,4 @@
 //= require_tree .
 //= require quill.min
 //= require quill.global
+//= require local-time
