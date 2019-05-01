@@ -1,0 +1,130 @@
+.create-article {
+  margin-top: 60px;
+
+  .quill {
+    margin-top: 0.5rem;
+  }
+  .text-editor {
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 60%;
+    justify-content: center;
+  }
+
+  .ql-container.ql-snow {
+    border: unset;
+  }
+
+  .ql-toolbar.ql-snow {
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    padding: 0.8rem;
+  }
+
+  .ql-editor {
+    min-height: 20rem;
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .editor {
+    outline: none;
+    margin: 2rem;
+    height: 30rem;
+    font-size: 2rem !important;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    -webkit-user-modify: read-write-plaintext-only;
+  }
+  .ql-container p {
+    color: black;
+  }
+  .ql-toolbar.ql-snow {
+    box-sizing: border-box;
+    padding: 0.8rem;
+    outline: none;
+  }
+  .ql-toolbar.ql-snow,
+  .ql-picker.ql-expanded,
+  .ql-picker-label:focus {
+    border-color: #ccc;
+    outline: none !important;
+  }
+  .ql-snow .ql-picker-options .ql-picker-item:focus {
+    outline: none !important;
+  }
+  .ql-snow .ql-formats {
+    outline: none;
+  }
+  /* Snow Theme */
+  .ql-snow.ql-toolbar {
+    display: block;
+    background: white;
+  }
+
+  /* Bubble Theme */
+  .ql-bubble .ql-editor {
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5em;
+  }
+
+  textarea::placeholder {
+    color: rgba(0, 0, 0, 0.34);
+    font-family: 'Alegreya', sans-serif, Helvetica;
+    content: 'enter';
+  }
+  .ql-snow.ql-toolbar {
+    display: block;
+    color: #ddd;
+  }
+
+  textarea {
+    border: unset;
+    outline: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 3rem;
+    resize: none;
+    border-bottom: 0.1rem solid rgb(230, 223, 223);
+    width: 100%;
+  }
+
+  .file-input {
+    position: relative;
+    // z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    // margin: 0;
+    margin-bottom: 5px;
+  }
+  .image-display {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .image-div img {
+    width: 900px !important;
+    height: 300px !important;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  .fa-times {
+    display: none;
+  }
+  .article-button {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+  }
+  [type='file'] {
+    display: none;
+  }
+  .article_title {
+    border: unset !important;
+    border-bottom: 1px solid gray !important;
+    outline: none !important;
+    border-radius:unset; 
+  }
+}

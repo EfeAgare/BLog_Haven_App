@@ -1,0 +1,34 @@
+<div class = 'col-md-8 offset-2'>
+<div className="article-display">
+    <div className="heading-section">
+      <h1><%= @article.title%></h1>
+        <div className="article-info">
+                  <p className="author">
+                    written by
+                  </p>
+              </div>
+              <p className="date-created"></p>
+              <p className="time-to-read"></p>
+            </div>
+
+         <section className="article-image-container" >
+         <%= image_tag  @article.image_url.to_s %>
+         </section>
+          <section className="article-body-container">
+            <div className="article-body"><%= sanitize @article.article_body %></div>
+            <div className="tags-container"></div>
+            <section className="reaction-share-section">
+              <div className="reaction-container">
+
+                  <img src={twitter} alt="twitter logo" className="social" />
+                </a>
+              </div>
+            </section>
+            <section className="comment-section">
+              <div className="container pt-5 pb-5">
+                <h2>Comments</h2>
+              </div>
+            </section>
+          </section>
+</div>
+</div>
