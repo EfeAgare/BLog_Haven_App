@@ -1,0 +1,116 @@
+.navbar {
+  padding: 1rem 6rem;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  background-color: #fff !important;
+}
+
+
+
+
+
+.eebTik {
+  font-size: 20px;
+  line-height: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-transform: capitalize;
+  width: auto;
+  display: block;
+  background: rgb(11, 65, 205);
+  border-radius: 0.4rem;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  transition: all 0.3s ease 0s;
+  padding: 0.3rem 1rem;
+}
+.banner h1,
+.banner h2 {
+  padding-bottom: 2rem;
+  margin-bottom: 0;
+}
+
+.banner .banner-p {
+  font-size: 25px;
+  padding-bottom: 2rem;
+  font-family: 'The Girl Next Door', cursive;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.align-items-center {
+  -ms-flex-align: center!important;
+  align-items: center!important;
+}
+
+.d-flex {
+  display: -ms-flexbox!important;
+  display: flex!important;
+  margin-top: 40px;
+}
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.d-none.d-sm-block.col {
+  margin-top: 20px;
+}
+.justify-content-center {
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.reviews {
+  padding-top: 5.2rem;
+  padding-bottom: 5.2rem;
+  background-color: #fafafa;
+  box-shadow: 0 0.2rem 0.4rem rgba(146, 143, 143, 0.29);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reviews h2 {
+  padding-bottom: 3rem;
+}
+.text-center {
+  text-align: center!important;
+}
+.article-list{
+  display: block;
+}
+.personalised-container {
+  height: auto;
+  padding: 2rem;
+  padding-bottom: 0rem;
+}
