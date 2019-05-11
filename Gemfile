@@ -68,3 +68,8 @@ gem 'font-awesome-sass', '~> 5.8.1'
 gem 'carrierwave', '~> 1.0'
 gem 'local_time' 
 gem 'inline_svg'
+
+gem 'minitest', group: :test
+gem 'minitest-reporters', group: :test
+
+gem 'rubocop-performance'
