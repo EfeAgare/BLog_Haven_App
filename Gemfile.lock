@@ -67,6 +67,7 @@ GEM
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.1.0)
       aws-eventstream (~> 1.0, >= 1.0.2)
+    bcrypt (3.1.12)
     bindex (0.7.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -154,12 +155,15 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
+    orm_adapter (0.5.0)
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
     pg (1.1.4)
     popper_js (1.14.5)
     public_suffix (3.0.3)
+    public_uid (1.3.0)
+      orm_adapter (~> 0.5)
     puma (3.12.1)
     quilljs-rails (0.0.4)
     rack (2.0.7)
@@ -269,6 +273,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-s3
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   bootstrap
   byebug
@@ -285,6 +290,7 @@ DEPENDENCIES
   minitest
   minitest-reporters
   pg (~> 1.1)
+  public_uid
   puma (~> 3.11)
   quilljs-rails
   rails (~> 5.2.3)
