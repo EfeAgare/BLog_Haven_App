@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get  '/help' => 'welcome#help'
   get  '/signup', to: 'users#new'
+
+  post '/signup',  to: 'users#create'
   resources :articles
+  resources :users
 end
  

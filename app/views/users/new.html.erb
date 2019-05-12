@@ -1,6 +1,30 @@
 
-<div class="container">
+<div class="signup-form">
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
+<h2>Sign up</h2>
+
+    <%= form_for(@user, url: signup_path) do |f| %>
+    <%= render 'shared/error_messages'%>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control input-lg"  %>
 </div>
+<div class="form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control input-lg" %>
+</div>
+<div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control input-lg" %>
+      </div>
+<div class="form-group">
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: "form-control input-lg" %>
+</div>
+<div class="form-group">
+      <%= f.submit "Create my account", class: "btn btn-primary " %>
+      </div>
+    <% end %>
+  
+   <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+   </div>
