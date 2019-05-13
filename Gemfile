@@ -75,3 +75,5 @@ gem 'minitest-reporters', group: :test
 gem 'rubocop-performance'
 
 gem 'public_uid'
+
+gem 'rails-controller-testing'
