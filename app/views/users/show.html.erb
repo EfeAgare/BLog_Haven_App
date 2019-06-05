@@ -1,11 +1,183 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+<div class="main-section">
+  <%= render 'shared/error_messages' %>
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+      <div class="jumbotron jumbotron-fluid" style='background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/08/57/41562ad4a92b16a.jpg); background-position: center;
+  background-repeat: no-repeat;    height: 40vh;
+  background-size: cover'>
+    </div>
+    <div class="user-division">
+      <div class="user-profil-part user-left-part">
+          <div class="user-image text-center">
+            <img
+              src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png"
+              class="rounded-circle"     style="
+  border: 4mm ridge rgba(170, 50, 220, .6) !important"
+            />
+          </div>
+          <div
+            class="user-detail-section1 text-center"
+          >
+            <button
+              id="btn-contact"
+              data-toggle="modal"
+              data-target="#contact"
+              class="btn btn-primary btn-block follow"
+            >
+              Change Image
+            </button>
+            <button class="btn btn-primary btn-block">Follow</button>
+          </div>
+          <div class="row user-detail-row">
+            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
+              <div class="border"></div>
+              <div class='user-stats'>
+              <div class='user-followers'>
+                <p>Followers</p>
+              <span>320</span>
+              </div>
+               <div class='user-following'>
+                <p>Following</p>
+              <span>320</span>
+              </div>
+             
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      <div class="profile-right-section user-right-part">
+          <div class="profile-header">
+              <div
+                class="profile-header-section1 pull-left"
+              >
+                <h1><%= @user.name %></h1>
+                <h5>Developer</h5>
+              </div>
+            </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="user-tab">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" style="
+    width: 40%">
+                    <a
+                      class="nav-link active"
+                      href="#profile"
+                      role="tab"
+                      data-toggle="tab"
+                      ><i class="fas fa-user-circle"></i> User Details</a
+                    >
+                  </li>
+                  <li class="nav-item" style="
+    width: 40%">
+                    <a
+                      class="nav-link"
+                      href="#buzz"
+                      role="tab"
+                      data-toggle="tab"
+                      ><i class="fas fa-info-circle"></i> Update Profile</a
+                    >
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div
+                    role="tabpanel"
+                    class="tab-pane fade show active"
+                    id="profile"
+                  >
+                    <div class="row">
+                      <div class="col-md-2 user-name-label">
+                        <label>Name</label>
+                      </div>
+                      <div class="col-md-6 user-name">
+                        <p><%= @user.name %></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2 user-email-label">
+                        <label>Email</label>
+                      </div>
+                      <div class="col-md-6 user-email-label">
+                        <p> <%= @user.email %></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label>Phone Number</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p>08034567895</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label>Professsion</label>
+                      </div>
+                      <div class="col-md-6 user-job-title">
+                        <p>Developer</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <label>Bio</label>
+                      </div>
+                      <div class="col-md-6 user-job-title">
+                        <p>I am the great guy, you Know</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="buzz">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Name</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p><input type="text" name="" id="" value="<%= @user.name %>" placeholder="<%= @user.name %>" class= "form-control input-lg"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Professsion</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p><input type="text" name="" id="" class= "form-control input-lg"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Email</label>
+                      </div>
+                      <div class="col-md-6">
+                        <p><input type="text" name="" id="" class= "form-control input-lg" value="<%= @user.email %>" placeholder="<%= @user.email %>"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label>Bio</label>
+                      </div>
+                      <div class="col-md-6">
+                      <p><textarea name="" id="" cols="3" rows="3" class= "form-control input-lg"></textarea></p>
+                        
+                      </div>
+                    </div>
+                     <div class="row">
+                     <div class="col-md-6">
+                        <label></label>
+                      </div>
+                      <div class="col-md-6">
+                        <p> <button class="btn btn-primary btn-block submit-update">Submit</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>

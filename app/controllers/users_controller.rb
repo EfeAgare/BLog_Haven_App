@@ -18,6 +18,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find_by(params[:public_uid])
+  end
+
   private
 
   def user_params
