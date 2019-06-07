@@ -129,13 +129,15 @@
                       </div>
                     </div>
                   </div>
+                  
                   <div role="tabpanel" class="tab-pane fade" id="buzz">
+                  <%= form_tag "#", id: "update", method: "patch", multipart: true do %>
                     <div class="row">
                       <div class="col-md-6">
                         <label>Name</label>
                       </div>
                       <div class="col-md-6">
-                        <p><input type="text" name="" id="" value="<%= @user.name %>" placeholder="<%= @user.name %>" class= "form-control input-lg"></p>
+                        <p><input type="text" name="" id="user-name" value="<%= @user.name %>" placeholder="<%= @user.name %>" class= "form-control input-lg"></p>
                       </div>
                     </div>
                     <div class="row">
@@ -143,7 +145,7 @@
                         <label>Professsion</label>
                       </div>
                       <div class="col-md-6">
-                        <p><input type="text" name="" id="" class= "form-control input-lg"></p>
+                        <p><input type="text" name="" id="user-professsion" class= "form-control input-lg"></p>
                       </div>
                     </div>
                     <div class="row">
@@ -151,7 +153,7 @@
                         <label>Email</label>
                       </div>
                       <div class="col-md-6">
-                        <p><input type="text" name="" id="" class= "form-control input-lg" value="<%= @user.email %>" placeholder="<%= @user.email %>"></p>
+                        <p><input type="text" name="" id="user-email" class= "form-control input-lg" value="<%= @user.email %>" placeholder="<%= @user.email %>"></p>
                       </div>
                     </div>
                     <div class="row">
@@ -159,10 +161,10 @@
                         <label>Bio</label>
                       </div>
                       <div class="col-md-6">
-                      <p><textarea name="" id="" cols="3" rows="3" class= "form-control input-lg"></textarea></p>
-                        
+                      <p><textarea name="" id="user-bio" cols="3" rows="3" class= "form-control input-lg"></textarea></p>
                       </div>
                     </div>
+                     <% end %>
                      <div class="row">
                      <div class="col-md-6">
                         <label></label>
@@ -171,7 +173,9 @@
                         <p> <button class="btn btn-primary btn-block submit-update">Submit</button></p>
                       </div>
                     </div>
+                    
                   </div>
+                 
                 </div>
               </div>
             </div>

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # class ImageFileNameValidator < ActiveModel::EachValidator
 #   def validate_each(record, attribute, value)
 #     supported_extensions = options.fetch(:supported_extensions, %w{.jpg .png .jpeg})

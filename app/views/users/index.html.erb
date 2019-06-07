@@ -1,0 +1,41 @@
+<div class="panelist-wrapper">
+  <div class="panelist-container">
+    <div
+      class="panelist-modal panelist-modal--has-shadow panelist-modal--has-radius"
+    >
+      <div class="panelist-content">
+        <h4 class="is-blue is-capitalized">All users</h4>
+        <%= will_paginate @users%>
+        <div class="panelist-cards mdl-grid">
+          <% @users.each do |user| %> 
+          <a href="<% link_to user %>" class="panelist-card mdl-cell mdl-cell--3-col mdl-cell--8-col-tablet">
+          <div class="panelist-card__content">
+            <div class="avatar is-circular">
+              <div class="oval">
+                <img
+                  alt=""
+                  src="https://www.cricbuzz.com/stats/img/faceImages/544.jpg"
+                />
+              </div>
+            </div>
+            <p class="is-black is-capitalized avatar-name"><%= user.name %></p>
+            <p><%= user.email %></p>
+            <%
+=begin%>
+ <p><% if current_user.admin? && !current_user?(user) %>
+             <%= link_to "delete", user, method: :delete,
+            data: { confirm: "You sure?" } %>
+           <% end %></p> 
+<%
+=end%>
+          </div>
+          </a>
+          <%end %>
+        </div>
+        <%= will_paginate @users %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "delete_modal" %>

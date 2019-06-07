@@ -1,0 +1,130 @@
+// --------------------------------------------------------------
+// This file contains all variable declarations, if any.
+// --------------------------------------------------------------
+
+// Base Fonts
+$base-font-size: 16px;
+
+// Colors
+$border-color:#ced4da;
+$input-color: #495057;
+$google-btn-blue: #4786ff;
+$grey-color: #525252;
+$border-black: #000;
+$top-section-black: #333e44;
+$background-white: #fff;
+$background-light-grey: #f0f4f5;
+$background-off-white: #ccc;
+$disable-background-color: #eee;
+$border-off-white: #d3d3d3;
+$main-background-color: #f4f8f9;
+$background-blue: #3359db;
+$background-yellow: #ffaf30;
+$background-dark-yellow: #FFE7C0;
+$filter-label-color: #696969;
+$select-color: #9f9f9f;
+$answer-color: #888;
+$profile-text-color: #333e44;
+$select-border-color: #d3d3d3;
+$filter-numbering-color: rgba(51, 89, 219, 0.2);
+$shadow-color: rgba(0, 0, 0, 0.03);
+$list-shadow-color: rgba(0, 0, 0, 0.5);
+$light-blue: #d6def7;
+$text-grey: #A1A1A1;
+$light-grey: #838383;
+$faded-grey: #b9b9b9;
+$notification-pane-grey: #f2f2f2;
+$notification-light-grey: #757575;
+$add-learner-label-color: #303030;
+$add-learner-option-color: #323c47;
+$add-learner-border-color: #e9eff4;
+$red: #f57474;
+$green: #00b803;
+$off-grey: #bbb;
+$header-text-color: #303030;
+$disabled-text-color: rgba(128, 128, 128, 0.6);
+$step-background: #d9dce0;
+$program-phase-grey: #888888;
+$button-grey: #8B8B8B;
+$program-title-grey: #444343;
+$program-desc-grey: #696868;
+$learner-profile-grey: #5e686b;
+$learning-ecosystem-active: #0459E4;
+$learning-ecosystem-phase-grey: #4a4a4a;
+$indigo: #4b0082;
+$analytics-export-list-charcoal: #444444;
+$program-details-edit-text-color: #777;
+$input-focus-background: #EFEFEF;
+$current-phase-title: #121212;
+$learning-ecosystem-btn: #3359DF;
+$learning-ecosystem-btn-text: #212B36;
+$learning-ecosystem-table-head: #727272;
+$background-grey : #F1F1F1;
+$program-modal-background-color: rgba(0, 0, 0, 0.6);
+$learning-ecosystem-text-color: #333e44;
+$dropdown-text-color: #808080;
+$feedback-details-text-bg: rgba(216,216,216,0.1);
+$fade-white: #8B8B8B;
+$view-submission-content: #5A5A5A;
+$view-submission-description:#808080;
+$background-grey: #d8d8d8;
+$background-dark-grey: #333E44;
+$checkmark-border: #B7BFCC;
+$add-choice-color: #999;
+$grid-option-number-color: #c7c7c7;
+$danger-red: #e40404;
+
+
+$washed-grey: #b2bbc6;
+
+// Margin
+$main-content-margin-top: 8.5em;
+$main-content-padding-top-responsive: 2.5em;
+$main-content-padding-top-large-tablet: 10.5em;
+
+// Borders
+$dropdown-border: 1px solid rgba(159, 159, 159, 0.5);
+$add-lfa-border: 1px solid rgba(188, 188, 188, 0.4);
+$border-grey: #e4e2e2;
+$grey-text-color: #bcbcbc;
+$andela-blue: #3359db;
+$andela-light-blue: #BDC9F0;
+$btn-blue: #3459db;
+$loader-border: #c5d1f9;
+$learning-ecosystem-border: #cfcfcf;
+
+
+
+// Font family
+$font-family-light: DINPro-Light;
+$font-family-regular: DINPro-Regular;
+$font-family-medium: DINPro-Medium;
+$font-family-bold: DINPro-Bold;
+
+
+// Pitch Setup View
+$pitch-green: #10a36d;
+$pitch-invite-learner: #919eab;
+$pitch-invite-learner-input: #dfe3e8;
+$pitch-invite-learner-input-color: #f9fafb;
+
+// Panelist
+$panel-modal-shadow: 0 4px 9px 0 rgba(0,0,0, .05);
+$panel-card-shadow: 0 2px 4px rgba(0,0,0, .1);
+$panel-card-shadow-hover: 0 1px 2px rgba(0,0,0, .1);
+$panelist-avatar-color: rgba(51,62,68,0.52);
+
+$respond-success-btn: #10A36D;
+
+// Margin
+$main-content-margin-top: 8.5em;
+$main-content-padding-top-responsive: 2.5em;
+$main-content-padding-top-large-tablet: 10.5em;
+
+
+@mixin main-content-margin {
+  width: 95%;
+  margin: $main-content-margin-top auto 0;
+  position: relative;
+}
+
