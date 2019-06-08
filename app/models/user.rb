@@ -22,12 +22,12 @@ class User < ApplicationRecord
 
   # Activates an account.
   def activate
-    update_all(activated: true, activated_at: Time.now.in_time_zone)
+    update(activated: true, activated_at: Time.now.in_time_zone)
   end
 
   # Sends activation email.
   def send_activation_email
-    UserMailer.account_activation(self).deliver_now
+    UserMailer.activation_account(self).deliver_now
   end
 
   # Returns a random token

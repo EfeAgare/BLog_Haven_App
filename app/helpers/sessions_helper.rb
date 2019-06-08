@@ -8,8 +8,8 @@ module SessionsHelper
   def remember(user)
     user.remember
     cookies.permanent.signed[:user_id] = user.id
-    cookies[:remember_token] = { value:  user.remember_token,
-      expires: 1.weeks.from_now.utc }
+    cookies[:remember_token] = { value: user.remember_token,
+                                 expires: 1.week.from_now.utc }
   end
 
   # Returns true if the given user is the current user.

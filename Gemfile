@@ -88,4 +88,3 @@ gem 'rubocop-rails'
 
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate',           '~> 3.1.7'
-
