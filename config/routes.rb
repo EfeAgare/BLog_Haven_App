@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   patch '/users/update', to: 'users#update_user'
   resources :articles
   resources :users
+  resources :account_activations, only: [:edit]
 end

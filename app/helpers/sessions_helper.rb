@@ -8,7 +8,8 @@ module SessionsHelper
   def remember(user)
     user.remember
     cookies.permanent.signed[:user_id] = user.id
-    cookies.permanent[:remember_token] = user.remember_token
+    cookies[:remember_token] = { value:  user.remember_token,
+      expires: 1.weeks.from_now.utc }
   end
 
   # Returns true if the given user is the current user.
@@ -17,12 +18,12 @@ module SessionsHelper
  end
 
   def current_user
-    # f session of user id exists (while setting user id to session of user id)
+    # if session of user id exists (while setting user id to session of user id)
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user&.authenticated?(cookies[:remember_token])
+      if user&.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end

@@ -14,7 +14,9 @@ User.create!(name: 'Agare',
              password_confirmation: 'agareefe',
              admin: true,
              bio: 'I love what I do and I will keep doing it',
-             profession: 'Admin')
+             profession: 'Admin',
+             activated: true,
+             activated_at: Time.zone.now)
 
 10.times do |n|
   name  = Faker::Name.name
@@ -25,7 +27,9 @@ User.create!(name: 'Agare',
                password: password,
                password_confirmation: password,
                bio: 'I love what I do and I will keep doing it',
-               profession: 'Software Developer')
+               profession: 'Software Developer',
+               activated: true,
+               activated_at: Time.zone.now)
 end
 
 10.times do |n|
@@ -37,7 +41,9 @@ end
                password: password,
                password_confirmation: password,
                bio: 'I love what I do and I will keep doing it',
-               profession: 'Civil Engineer')
+               profession: 'Civil Engineer',
+               activated: true,
+               activated_at: Time.zone.now)
 end
 
 10.times do |n|
@@ -49,7 +55,9 @@ end
                password: password,
                password_confirmation: password,
                bio: 'This is me, i love what I do',
-               profession: 'Electrical Engineer')
+               profession: 'Electrical Engineer',
+               activated: true,
+               activated_at: Time.zone.now)
 end
 
 20.times do |n|
@@ -61,5 +69,7 @@ end
                password: password,
                password_confirmation: password,
                bio: '',
-               profession: 'Fashion designer')
+               profession: 'Fashion designer',
+               activated: true,
+               activated_at: Time.zone.now)
 end
