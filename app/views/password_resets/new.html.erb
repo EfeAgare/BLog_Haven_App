@@ -1,3 +1,4 @@
+<% provide(:title, "Forgot password") %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,6 +36,10 @@
         
         .survey-response-vof-team {
           margin-top: 40px;
+        }
+
+        .submit-text{
+          color: white
         }
         
         .recipient-name {
@@ -100,19 +105,21 @@
           <div class="survey-response-content">
             <p class="vof-email-logo">
             </p>
-            <h2 class="recipient-name">Hi <%= @user.name %></h2>
+            <h2 class="recipient-name">Password Reset</h2>
             <p class="survey-response-text">
-              Thank you for creating an account with us
+              Enter your Email address
             </p>
-            <p class="survey-response-text">
-              Click on the link below to activate your account
+            
+              <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+              <p class="survey-response-text">
+               <%= f.email_field :email, class: 'form-control', placeholder: 'Enter your email' %>
             </p>
             <p class="survey-link">
-              <a href="<%= edit_account_activation_url(@user.activation_token,
-                                                    email: @user.email)%>" class="survey-link-text"
-              >Activate account</a
+              <a href="#" class="survey-link-text"
+              > <%= f.submit "Submit", class: 'submit-text' %></a
             >
             </p>
+            <% end %>
           </div>
           <div class="survey-response-footer">
             With love from Author's Blog
