@@ -1,17 +1,15 @@
 image_post = ->
 # Display the image to be uploaded.
-  $('div').removeClass('image-div img')
   $('.file-input').on 'change', (e) ->
     displayImage = URL.createObjectURL(event.target.files[0])
-    $('div').addClass('image-div img')
+    $('.image-div').show()
     $('.fa-times').css('display', 'unset')
     $('.image-display').attr('src', displayImage)
 
 
 image_delete = ->
-      # Display the image to be uploaded.
-    $('.image-display').attr('src', '')
-    $('div').removeClass('image-div img')
+    $('.image-display').removeAttr('src')
+    $('.image-div').hide()
     $('.fa-times').hide()
 
 

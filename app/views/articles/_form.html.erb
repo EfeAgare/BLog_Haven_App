@@ -21,7 +21,7 @@
             </i>
           </span>
            </div>
-<div class="image-div">
+<div class="image-div" style="display: none">
   <img class="image-display"/>
 
 </div>
@@ -31,7 +31,7 @@
          
   <div class="form-group">
    <div class="form-group mb-4" >
-      <%= f.text_area :article_body, class: 'quill_container', placeholder: 'Write your story....',  required: true %>
+      <%= f.text_area :content, class: 'quill_container', placeholder: 'Write your story....',  required: true %>
    </div>
   <%= f.submit "Publish", class: 'btn btn-lg btn-primary float-right article-button' %> 
   </div>

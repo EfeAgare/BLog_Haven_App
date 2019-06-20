@@ -18,8 +18,11 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   patch '/users/update', to: 'users#update_user'
+
   resources :articles
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
+  resources :microposts
+  get '/users/microposts/:id', to: 'users#show_micropost', as: 'user_micropost'
 end

@@ -1,0 +1,11 @@
+ <div class="microposts-dialog">
+    <% if @user.microposts.any? %>
+      <h3 class='count'>Microposts (<%= @user.microposts.count %>)</h3>
+      <%= link_to 'Create ', new_micropost_path,   class: 'btn btn-primary btn-lg' %>
+</div>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
