@@ -38,7 +38,7 @@ class User < ApplicationRecord
 
   def remember
     self.remember_token = User.new_token
-    update(:remember_digest, User.digest(remember_token))
+    update_attribute(:remember_digest, User.digest(remember_token))
   end
 
   def authenticated?(attribute, token)
@@ -68,6 +68,11 @@ class User < ApplicationRecord
   # Returns true if a password reset has expired.
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 
   private

@@ -1,1 +1,3 @@
-window.User = {}
+window.User = {
+  Micropost: {}
+}

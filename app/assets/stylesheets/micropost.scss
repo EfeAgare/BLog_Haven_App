@@ -19,6 +19,9 @@
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+    -webkit-box-shadow: 10px 4px 0px -34px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 4px 0px -34px rgba(0,0,0,0.75);
+    box-shadow: 10px 4px 0px -34px rgba(0,0,0,0.75);
   }
   .user {
     margin-top: 5em;
@@ -55,4 +58,35 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.micropost-stamp {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+
+}
+.micropost-stamp a:hover {
+  text-decoration: none;
+}
+
+.delete-micropost {
+  background-color: tomato;
+  cursor: pointer;
+}
+.delete-micropost p {
+  color: #ffffff !important;
+  padding: 5px;
+}
+
+.micropost-btn-cancel,.micropost-btn-delete {
+  width: 20%
+}
+
+.delete-discription {
+  text-align: center;
+}
+
+.modal-content-delete {
+  width: 40% !important;
 }

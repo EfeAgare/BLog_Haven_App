@@ -35,7 +35,7 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://blog-haven.herokuapp.com'
+  host = 'localhost:8000'
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com',

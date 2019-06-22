@@ -24,5 +24,6 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts
-  get '/users/microposts/:id', to: 'users#show_micropost', as: 'user_micropost'
+  post '/user/microposts', to: 'microposts#create_micropost'
+  get '/users/microposts/:id', to: 'microposts#show_micropost', as: 'user_micropost'
 end

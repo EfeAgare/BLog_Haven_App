@@ -22,16 +22,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def show_micropost
-    @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
-  end
-
   def create
     @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
-      flash[:info] = 'Account created successfully'
+      flash[:info] = 'Account created successfully and check your mail to activated your account'
       redirect_to root_url
     else
       render 'new'
@@ -68,7 +63,6 @@ class UsersController < ApplicationController
       bio: params['bio']
     }
   end
-
 
   # Confirms the correct user.
   def correct_user
