@@ -9,8 +9,7 @@
   <span>
    <% if current_user?(micropost.user) %>
       <div class = "delete-micropost">
-      <p class= 'delete-micropost-text-'>Delete</p>
-      <input type='hidden' value="<%= micropost.id %>" class='micropost-id' id="micropost-id"/>
+      <p  data-id="<%= micropost.id %>" class= 'delete-micropost-text'>Delete</p>
       </div>
   <% end %>
   </span>

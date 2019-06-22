@@ -25,9 +25,11 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
-    @micropost.destroy
-    flash[:success] = "Micropost deleted"
-    redirect_to request.referrer || root_url
+    if @micropost.destroy
+      render json: { message: 'Micropost deleted' }
+    else
+      render json: { message: 'An error occurred' }
+    end
   end
 
   private

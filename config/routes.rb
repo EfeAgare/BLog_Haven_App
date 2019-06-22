@@ -20,10 +20,16 @@ Rails.application.routes.draw do
   patch '/users/update', to: 'users#update_user'
 
   resources :articles
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts
+  resources :relationships,       only: [:create, :destroy]
   post '/user/microposts', to: 'microposts#create_micropost'
   get '/users/microposts/:id', to: 'microposts#show_micropost', as: 'user_micropost'
+  delete '/user/microposts/:id', to: 'microposts#destroy'
 end

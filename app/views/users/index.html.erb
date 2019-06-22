@@ -20,14 +20,6 @@
             </div>
             <p class="is-black is-capitalized avatar-name"><%= user.name %></p>
             <p><%= user.email %></p>
-            <%
-=begin%>
- <p><% if current_user.admin? && !current_user?(user) %>
-             <%= link_to "delete", user, method: :delete,
-            data: { confirm: "You sure?" } %>
-           <% end %></p> 
-<%
-=end%>
           </div>
           </a>
           <%end %>

@@ -26,9 +26,8 @@ class User.API
 
   deleteMicropost: (id, afterError) ->
     return $.ajax(
-      url: "/user/microposts"
+      url: "/user/microposts/#{id}"
       type: "DELETE"
-      data: id
       headers: {
             'X-CSRF-Token': Rails.csrfToken()
       },

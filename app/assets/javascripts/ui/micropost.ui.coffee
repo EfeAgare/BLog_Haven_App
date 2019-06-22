@@ -6,9 +6,10 @@ class User.Micropost.UI
 
   initialize: () ->
     @displayModal()
-    @closeModal()
+    @closeCreateModal()
     @createMicropost()
     @deleteMicropost()
+    @closeDeleteModal()
 
   displayModal: () =>
     $('.micropost-create').on 'click', =>
@@ -34,14 +35,32 @@ class User.Micropost.UI
 
   deleteMicropost: -> 
     self = @
-    $('.delete-micropost').on 'click', => 
-      console.log $(this).attr("value")
-      # console.log self.micropost_id
-      # $('.modal-field-delete').show()
+    $('.delete-micropost .delete-micropost-text').on 'click', -> 
+      self.micropost_id =  $(this).attr("data-id")
+      $('.modal-field-delete').show()
+      $('.micropost-btn-delete').on 'click', -> 
+        self.api.deleteMicropost(self.micropost_id, self.flashErrorMessage)
+          .then((res) -> (
+            if res.message == 'Micropost deleted'
+              self.flashSuccessMessage(res.message)
+              $('.modal-field-delete').hide()
+              location.reload()
+            else
+              self.flashErrorMessage(res.message)
+          )
+        )
 
 
 
-  closeModal: ->
+  closeDeleteModal: ->
+    $('span.micropost-delete-close').on 'click', ->
+      $('.modal-field-delete').hide()
+
+    $('.modal-field-delete').on 'click', (e)->
+      if not e.target.closest('.micropost-modal-content')
+        $('.modal-field-delete').hide()
+
+  closeCreateModal: ->
     $('span.micropost-close').on 'click', ->
       $('.modal-field').hide()
 
