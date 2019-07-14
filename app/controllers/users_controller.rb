@@ -33,6 +33,18 @@ class UsersController < ApplicationController
     end
   end
 
+  def uploadImage
+    @user = User.find(params[:id])
+    if @user.id == session[:user_id]
+      if @user.update(avatar: params[:user][:avatar])
+        flash[:success] = 'Profile Image changed successfully'
+        redirect_to @user
+      else
+        flash[:error] = "Error in Image upload"
+      end
+    end
+  end
+
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = 'User deleted'
@@ -52,14 +64,14 @@ class UsersController < ApplicationController
   def following
     @title = "Following"
     @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following.paginate(page: params[:page], per_page: 5)
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.paginate(page: params[:page], per_page: 5)
     render 'show_follow'
   end
 

@@ -1,0 +1,51 @@
+
+.image-div {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: white;
+}
+.user_avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-weight: 400;
+  text-align: center;
+  padding-top: 12px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 35% !important;
+
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+  padding: 5px;
+}
+
+.field{
+  display: flex;
+}

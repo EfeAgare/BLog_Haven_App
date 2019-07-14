@@ -64,7 +64,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'aws-sdk-s3', require: false
 gem 'bootstrap'
-gem 'carrierwave', '~> 1.0'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'inline_svg'
 gem 'jquery-rails'
@@ -88,3 +87,7 @@ gem 'rubocop-rails'
 
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate',           '~> 3.1.7'
+
+
+gem 'carrierwave'
+gem 'cloudinary'

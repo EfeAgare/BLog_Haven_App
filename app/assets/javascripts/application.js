@@ -20,6 +20,7 @@
 //= require bootstrap
 //= require quill.global
 //= require local-time
+//= require cloudinary
 //= require toastr
 //= require_tree .
 

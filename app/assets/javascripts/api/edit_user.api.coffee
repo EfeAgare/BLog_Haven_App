@@ -1,5 +1,5 @@
 class User.API
-  createPitch: (data, afterError) ->
+  upDateUserDetails: (data, afterError) ->
    return $.ajax(
       url: "/users/update"
       type: "PATCH"
@@ -35,5 +35,18 @@ class User.API
       error: (error) ->
         afterError(error.statusText)
     )
+
+  upLoadUserProfile: (data, afterError) ->
+    return $.ajax(
+        url: "/user/upload"
+        type: "PATCH"
+        data: data
+        headers: {
+            'X-CSRF-Token': Rails.csrfToken()
+        },
+        dataType: 'json'
+        error: (error) ->
+          afterError(error.statusText)
+      )
 
   

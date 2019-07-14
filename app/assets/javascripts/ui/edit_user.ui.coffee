@@ -8,6 +8,24 @@ class User.UI
 
   initialize: ->
     @updateUserDetails()
+    @profile_image_change()
+
+
+  profile_image_change: ->
+    # Display the image to be uploaded.
+    $('.upload-profile-image').attr("disabled", true);
+    self  = @
+    $('.file-input').off("change").on 'change', (e) ->
+      if event.target.files[0].size <= 1000000 
+        console.log event.target.files[0].size
+        displayImage = URL.createObjectURL(event.target.files[0])
+        $('div.image-div').css({"background-image" : "url(" + "#{displayImage}" + ")", "background-size":"cover"})
+        $('.upload-profile-image').attr("disabled", false);
+      else
+        self.flashErrorMessage("You cannot upload this file because its size exceeds the maximum limit of 1 MB")
+        return
+
+
 
   updateUserDetails: ->
     self = @
@@ -33,7 +51,7 @@ class User.UI
           email: @email
         }
 
-        @api.createPitch(@details, self.flashErrorMessage)
+        @api.upDateUserDetails(@details, self.flashErrorMessage)
           .then((res) -> (
              self.flashSuccessMessage(res.message)
           ))

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   patch '/users/update', to: 'users#update_user'
 
+  patch '/user/:id/upload', to: "users#uploadImage", as: "upload_picture"
+
   resources :articles
   resources :users do
     member do
