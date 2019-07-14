@@ -1,0 +1,120 @@
+// Place all the styles related to the Relationships controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.postArticle  {
+  width: 970px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-article-image{
+  width: 50px;
+    height: 50px;
+    background: white;
+    margin-right: 20px;
+}
+
+.article-info,.time-and-date{
+  display: flex;
+  justify-content: center;
+}
+
+.time-and-date{
+  margin-top: 20px;
+}
+.article-author {
+  text-align: center;
+vertical-align: middle;
+line-height: 50px;
+}
+
+.time-to-read{
+  margin-left: 20px;
+}
+
+.article-image-display img {
+  width: 600px !important;
+    height: 505px !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+.article-image-display{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-index {
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.card-index  a{
+  margin: 20px;
+  width: 28%;
+  height: 300px;
+  color: black;
+}
+
+.card-group-index {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+}
+
+.card-index a {
+  text-decoration: none;
+  
+  }
+  
+  .card-index a:visited {
+    text-decoration: none;
+  }
+  
+  .card-index a:hover {
+    text-decoration: none;
+  }
+  
+.card-article-image img{
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+.card-article-image{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-article-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #081f2c;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card-article-body{
+  text-overflow: ellipsis;
+  color: #081f2c;
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.article-info-index{
+  display: flex;
+}

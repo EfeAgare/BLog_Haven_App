@@ -8,21 +8,20 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <%= favicon_link_tag asset_path('logo.jpg') %>
   </head>
-
   <body>
-  <%=  render 'shared/header'%>
-   <% unless flash.empty? %>
-    <script type="text/javascript">
+    <%=  render 'shared/header'%>
+    <% unless flash.empty? %>
+      <script type="text/javascript">
         <% flash.each do |f| %>
         <% type = f[0].to_s %>
         toastr['<%= type %>']('<%= f[1] %>');
         <% end %>
-    </script>
-   <% end %>
-
-      <%= yield %>
+      </script>
+    <% end %>
+    <%= yield %>
+    
   </body>
 </html>

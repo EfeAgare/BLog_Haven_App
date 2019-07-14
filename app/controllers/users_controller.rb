@@ -37,8 +37,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.id == session[:user_id]
       if @user.update(avatar: params[:user][:avatar])
-        flash[:success] = 'Profile Image changed successfully'
         redirect_to @user
+        flash[:success] = 'Profile Image changed successfully'
       else
         flash[:error] = "Error in Image upload"
       end

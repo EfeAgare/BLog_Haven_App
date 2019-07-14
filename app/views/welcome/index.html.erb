@@ -66,48 +66,36 @@
   <div class="personalised-container ">
     <div class="article-list">
       <h1 class="card-title-size">Featured articles</h1>
-      <div class="card-group">
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
+      <div class="card-group-index">
+  
+        <% if @articles %>
+        <% @articles.map do |article|%>
+        <div class="card-index">
+        <a href="/articles/<%= article.id%>">
+         <div class="card-article-image">
+         <% if  article.avatar.present? %>
+         <img src=" <%= article.avatar %>" alt="">
+         <% else %> 
+         <img src="https://readingagency.org.uk/news/male%20hands%20and%20book.jpg" alt="">
+         <% end %>
+         </div>
+             <div class="article-info-index">
+      <div class="user-article-image rounded-circle"
+                  style="background-image: url(<%= article.user.avatar %>); background-size:cover;"
+            >
+      </div>
+      <div class="article-author">
+        written by <%= article.user.name %>
+      </div>
+    </div>
+         <div class="card-article-title"><%= article.title %></div>
+         <div class="card-article-body"><%= article.content %></div>
+        </a>
+          
+          
         </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This card has supporting text below as a natural lead-in to
-              additional content.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="..." class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This card has even longer content
-              than the first to show that equal height action.
-            </p>
-            <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-          </div>
-        </div>
+        <% end %>
+        <% end %>
       </div>
     </div>
   </div>

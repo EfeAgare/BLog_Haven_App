@@ -16,8 +16,7 @@ class User.UI
     $('.upload-profile-image').attr("disabled", true);
     self  = @
     $('.file-input').off("change").on 'change', (e) ->
-      if event.target.files[0].size <= 1000000 
-        console.log event.target.files[0].size
+      if event.target.files[0].size <= 1000000
         displayImage = URL.createObjectURL(event.target.files[0])
         $('div.image-div').css({"background-image" : "url(" + "#{displayImage}" + ")", "background-size":"cover"})
         $('.upload-profile-image').attr("disabled", false);
@@ -53,7 +52,11 @@ class User.UI
 
         @api.upDateUserDetails(@details, self.flashErrorMessage)
           .then((res) -> (
-             self.flashSuccessMessage(res.message)
+            if res.message != "Profile Image changed successfully"
+              self.flashErrorMessage(res.message) 
+            else
+              self.flashSuccessMessage(res.message)
+              $('.upload-profile-image').attr("disabled", true);
           ))
         
   flashErrorMessage: (message) ->

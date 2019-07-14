@@ -92,17 +92,15 @@
 
   .file-input {
     position: relative;
-    // z-index: 2;
     width: 100%;
     height: calc(1.5em + 0.75rem + 2px);
-    // margin: 0;
     margin-bottom: 5px;
   }
   .image-display {
     margin: 0 auto;
     margin-bottom: 10px;
   }
-  .image-div img {
+  .article-image img {
     width: 900px !important;
     height: 300px !important;
     margin-left: auto;

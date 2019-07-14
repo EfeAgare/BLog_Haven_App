@@ -1,20 +1,27 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  def index
-    @articles = Article.all
-  end
 
   def new
     @article = Article.new
   end
 
   def create
-    @article = Article.new(article_params)
-    if @article.save
-      flash[:notice] = 'Article successfully created'
+    if article_params_avatar
+      @article = current_user.articles.new(article_params_avatar)
+    else
+      @article = current_user.articles.new(article_params_without_avatar)
+    end
+    binding.pry
+    if @article.saveq
+      flash[:success] = 'Article successfully created'
       redirect_to article_url(@article)
     else
+      message = ""
+      @article.errors.full_messages.map do |msg|
+        message += " #{msg}        "
+        flash[:error] = message
+      end
       render 'new'
     end
   end
@@ -38,7 +45,17 @@ class ArticlesController < ApplicationController
 
   private
 
-  def article_params
-    params.require(:article).permit(:title, :content, :image_url, :tags)
+  def article_params_avatar
+    {
+      title: params[:title],
+      content: params[:content],
+      avatar: params[:avatar]
+    }
+  end
+  def article_params_without_avatar
+    {
+      title: params[:title],
+      content: params[:content]
+    }
   end
 end

@@ -13,7 +13,6 @@
 
 //= require_tree ./global
 //= require rails-ujs
-//= require activestorage
 //= require jquery3
 //= require jquery_ujs
 //= require popper
@@ -23,6 +22,7 @@
 //= require cloudinary
 //= require toastr
 //= require_tree .
+
 
 
 $(document).ready(function() {

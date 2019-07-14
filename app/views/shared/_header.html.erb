@@ -15,7 +15,7 @@
       
   
     <% if logged_in? %>
-          <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li>
+
           <li class="dropdown nav-item">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
               Account <b class="caret"></b>
@@ -28,11 +28,12 @@
               <li ><%= link_to "Micropost", user_micropost_path(current_user), class:"nav-link" %></li>
               <li ><%= link_to "Settings", '#' , class:"nav-link"%></li>
               <li class="divider"></li>
-              <li ></li>
+              <li >
                 <%= link_to "Log out", logout_path, class:"nav-link", method: :delete %>
               </li>
             </ul>
           </li>
+          <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li>
         <% else %>
       <li class="nav-item">
         <%= link_to 'Help', help_path, class:"nav-link" %>

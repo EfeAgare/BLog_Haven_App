@@ -1,25 +1,34 @@
 <div class = 'postArticle '>
-
-    <div class="title-section">
-      <h1><%= @article.title%></h1>
-        <div class="article-info">
-                  <p clas="author">
-                    written by
-                  </p>
-              </div>
-              <p class="date-created"><%= local_time(@article.created_at, '%B %e, %Y')%></p>
-              <p class="time-to-read"></p>
-            </div>
-
-        <div class="article-image">
-         <%= image_tag  @article.image_url.to_s, class: "image-display" %>
-</div>
-            <div class="article-body"><%= sanitize @article.article_body %>
-            </div>
-            <section class="comment-section">
-              <div class="container pt-5 pb-5">
-                <h2>Comments</h2>
-              </div>
-            </section>
+  <div class="title-section">
+    <h1><%= @article.title%></h1>
+    <div class="article-info">
+      <div class="user-article-image rounded-circle"
+                  style="background-image: url(<%= @article.user.avatar %>); background-size:cover;"
+            >
+      </div>
+      <div class="article-author">
+        written by <%= @article.user.name %>
+      </div>
+    </div>
+    <div class="time-and-date">
+      <p class="date-created"><%= local_time(@article.created_at, '%B %e, %Y')%>.</p>
+      <p class="time-to-read"></p>
+    </div>
+  </div>
+  <div class="article-image-display">
+    <% if  @article.avatar.present? %>
+      <img src=" <%= @article.avatar %>" alt="">
+    <% else %>
+      <img src="https://readingagency.org.uk/news/male%20hands%20and%20book.jpg" alt="">
+    <% end %>
+  </div>
+  <div class="article-body"><%= sanitize @article.content %>
+  </div>
+  <section class="comment-section">
+    <div class="container pt-5 pb-5">
+      <h2>Comments</h2>
+      <hr>
+    </div>
+  </section>
 </div>
 </div>
