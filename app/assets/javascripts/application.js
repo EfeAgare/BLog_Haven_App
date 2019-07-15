@@ -17,7 +17,9 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require quill.min
 //= require quill.global
+//= require turbolinks
 //= require local-time
 //= require cloudinary
 //= require toastr

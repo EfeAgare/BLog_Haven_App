@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.new(article_params_without_avatar)
     end
     binding.pry
-    if @article.saveq
+    if @article.save
       flash[:success] = 'Article successfully created'
       redirect_to article_url(@article)
     else
