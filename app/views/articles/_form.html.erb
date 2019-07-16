@@ -1,23 +1,32 @@
 <div class = 'col-md-8 offset-2 create-article'>
   <%= form_for @article, html: { multipart: true ,  turbolinks: false } do |f| %>
-    <%= f.text_field :title , class: 'form-control article_title', placeholder: 'Title....', name: "title"%><br>
+    <%= f.text_field :title , class: 'form-control article_title', placeholder: 'Title....', name: "title", oninput: 'this.style.height = "";this.style.height = this.scrollHeight + "px"'%><br>
     <div class="article-button">
       <label for='file-input' ><i class="fa fa-upload"><span>Attach a cover picture (Optional)</span></i>
       </label>
       <%= f.file_field :avatar, name: "avatar", class: 'file-input-article', id: 'file-input', accept: "image/*" %>
       <span>
-        <i style="cursor: pointer;" class="fas fa-times"></i>
-      </i>
-    </span>
-  </div>
-  <div class="article-image">
-    <img src=" " alt="" class="image-display" style="display: none">
-  </div>
-  <div class="form-group">
-    <div class="form-group mb-4" >
-      <%= f.text_area :content, class: 'quill_container', placeholder: 'Write your story....', name: "content" %>
+        <% if @article.avatar? %>
+          <i style="cursor: pointer; display: block" class="fas fa-times" ></i>
+        <% else %>
+          <i style="cursor: pointer; display: none" class="fas fa-times"></i>
+        <% end %>
+      </span>
     </div>
-    <%= f.submit "Publish", class: 'btn btn-lg btn-primary float-right article-button real-submit' %>
-  </div>
-<% end %>
+    <% if @article.avatar? %>
+      <div class="article-image" style="display: block">
+        <img src=" <%= @article.avatar  %>" alt="" class="image-display">
+      </div>
+    <% else %>
+      <div class="article-image" style="display: none">
+        <img src=" " alt="" class="image-display" style="display: none">
+      </div>
+    <% end %>
+    <div class="form-group">
+      <div class="form-group mb-4" >
+        <%= f.text_area :content, class: 'quill_container', placeholder: 'Write your story....', name: "content", oninput: 'this.style.height = "";this.style.height = this.scrollHeight + "px"' %>
+      </div>
+      <%= f.submit "Publish", class: 'btn btn-lg btn-primary float-right article-button real-submit' %>
+    </div>
+  <% end %>
 </div>

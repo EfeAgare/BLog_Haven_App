@@ -72,16 +72,16 @@ line-height: 50px;
   flex-flow: row wrap;
 }
 
-.card-index a {
+.card-index a, .card-group-personal-index a {
   text-decoration: none;
   
   }
   
-  .card-index a:visited {
+  .card-index a:visited , .card-group-personal-index a{
     text-decoration: none;
   }
   
-  .card-index a:hover {
+  .card-index a:hover, .card-group-personal-index a {
     text-decoration: none;
   }
   
@@ -125,3 +125,94 @@ line-height: 50px;
 
 
 
+.my-articles {
+  background: #e9f7f1;
+  color: #10a36d;
+  height: 31px;
+  font-size: 13px;
+  line-height: 31px;
+  vertical-align: middle;
+  text-align: left;
+  margin: 20px auto 0;
+  border-radius: 15px;
+}
+.personal-articles {
+  width: 900px;
+  margin: auto;
+}
+
+.card-group-personal {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card-group-personal-index {
+    width: 40%;
+    margin: 30px;
+  }
+
+  .card-group-personal-index-article {
+    overflow: hidden;
+    height: 360px;
+  }
+
+  .article-action {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .delete-action {
+    margin-right: 20px;
+    background-color: #fce8e6;
+    padding: 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+    
+    a {
+      color:  #d93025;
+    }
+  }
+  .edit-action {
+    background-color: #e9f7f1;;
+    padding: 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+
+    a {
+      color: #48ca92;;
+    }
+  }
+  a {
+    text-decoration: none;
+    
+    }
+    
+    a:visited {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: none;
+    }
+}
+
+.article-body img {
+  width: 800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.file-input {
+  position: relative;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  margin-bottom: 5px;
+}
+
+
+.like-button  [type='submit'], .dislike-button  [type='submit'] {
+  display: none;
+}
+
+.fa-thumbs-down, .fa-thumbs-up {
+  cursor: pointer;
+}

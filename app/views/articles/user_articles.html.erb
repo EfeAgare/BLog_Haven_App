@@ -1,0 +1,45 @@
+<div class="personal-articles">
+  <div class="article-list">
+    <div class="card-group-personal">
+      <% if @articles %>
+        <% @articles.map do |article|%>
+          <div class="card-group-personal-index">
+            <div class="card-group-personal-index-article">
+              <a href="/articles/<%= article.id%>">
+                <div class="card-article-image">
+                  <% if  article.avatar.present? %>
+                    <img src=" <%= article.avatar %>" alt="">
+                  <% else %>
+                    <img src="https://readingagency.org.uk/news/male%20hands%20and%20book.jpg" alt="">
+                  <% end %>
+                </div>
+                <div class="article-info-index">
+                  <div class="user-article-image rounded-circle"
+                  style="background-image: url(<%= article.user.avatar %>); background-size:cover;"
+            >
+                  </div>
+                  <div class="article-author">
+                    written by <%= article.user.name %>
+                  </div>
+                </div>
+                <div class="card-article-title"><%= article.title %></div>
+                <div class="card-article-body"><%= sanitize article.content %></div>
+              </a>
+            </div>
+            <div class="article-action">
+              <div class="delete-action">
+                <%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+              </div>
+              <div class="edit-action">
+                <%= link_to 'Edit', edit_article_path(article) %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+ <%= render 'layouts/footer' %>

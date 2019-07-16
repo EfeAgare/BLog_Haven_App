@@ -24,11 +24,46 @@
   </div>
   <div class="article-body"><%= sanitize @article.content %>
   </div>
+  <div class="article-likes">
+    <div class="thumps-up">
+      <%= render 'articles/like' %>
+    </div>
+    <div class="thumps-down">
+      <%= render 'articles/dislike' %>
+    </div>
+  </div>
   <section class="comment-section">
     <div class="container pt-5 pb-5">
       <h2>Comments</h2>
       <hr>
     </div>
+     
+    <% if @article.comments.length != 0 %>
+    <% @article.comments.map do |comment| %>
+      <div class="comment-body" style="padding:10px;  border-style: solid;">
+        <div class="comment-body-one">
+          <%= comment.body %>
+        </div>
+        <% if comment.user_id == current_user.id %>
+          <div class="comment-action">
+            <div class="delete-action">
+              <%= link_to 'Destroy', [comment.article, comment],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+            </div>
+            <div class="edit-action">
+              <%= link_to 'Edit', [comment.article, comment] %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% else %>
+    <span></span>
+    <% end %>
   </section>
+   <div class="create-comment">
+      <%= render 'articles/comment_form' %>
+    </div>
 </div>
-</div>
+ <%= render 'layouts/footer' %>

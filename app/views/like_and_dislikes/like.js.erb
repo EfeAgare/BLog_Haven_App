@@ -1,0 +1,5 @@
+$(".thumps-up").html("<%= escape_javascript(render('articles/like'))%>");
+$(".fa-thumbs-up span").html('<%= @article.like_and_dislikes.where(status: "like").count %>');
+
+$(".thumps-down").html("<%= escape_javascript(render('articles/dislike'))%>");
+$(".fa-thumbs-down span").html('<%= @article.like_and_dislikes.where(status: "dislike").count %>');

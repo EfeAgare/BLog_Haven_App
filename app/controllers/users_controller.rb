@@ -2,12 +2,12 @@
 
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[index update_user destroy]
-  before_action :correct_user,   only: [:update_user]
+  before_action :current_user,   only: %i[update_user uploadImage show]
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.where(activated: true).paginate(page: params[:page],
-                                                  per_page: 12)
+    # @users = User.where(activated: true).paginate(page: params[:page],
+                                                  # per_page: 12)
   end
 
   def new

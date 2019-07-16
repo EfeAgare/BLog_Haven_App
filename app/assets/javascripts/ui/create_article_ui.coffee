@@ -9,7 +9,6 @@ class User.Article.UI
 
 
   article_image: ->
-    $('div.article-image').hide()
     self  = @
     $('.file-input-article').off("change").on 'change', (e) ->
       if event.target.files[0].size <= 1000000 
@@ -29,6 +28,7 @@ class User.Article.UI
   
   
   image_delete: ->
+    $('img.image-display').removeAttr('src')
     $('div.article-image').hide()
     $('img.image-display').hide()
     $('.fa-times').hide()
@@ -45,21 +45,6 @@ class User.Article.UI
     
     $(".time-to-read").text("#{self.result}")
 
-
-
-  # article_body_and_title_validation: ->
-  #   self = @
-  #   $(".fake-submit").off("click").click (e) ->
-  #     self.articleBody = $("#article_content").val()
-  #     self.article_title = $(".article_title").val()
-  #     if self.article_title.replace(/\s/g, '').length < 5 
-  #       self.flashErrorMessage("*Article Title must be at least 5 characters long")
-  #       return
-  #     else if self.articleBody.replace(/\s/g, '').length < 5 
-  #       self.flashErrorMessage("*Article body must be at least 20 characters long")
-  #     else
-  #       $(".real-submit").show()
-  #       $(".fake-submit").hide()
       
   flashErrorMessage: (message) ->
     toastr.error(message)

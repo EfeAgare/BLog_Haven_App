@@ -13,4 +13,14 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
+
+  def authenticated
+    user = User.find_by(id: session[:user_id])
+    if user.activated?
+      return true
+    else
+      flash[:danger] = 'You can perform this action'
+    end
+  end
+
 end

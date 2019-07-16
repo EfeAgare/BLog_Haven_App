@@ -1,0 +1,8 @@
+<%= form_for([ @article, @article.comments.build ], remote: true) do |form| %>
+  <div class="create-comment-body">
+    <%= form.text_area :body, placeholder: 'Start here....', oninput: 'this.style.height = "";this.style.height = this.scrollHeight + "px"'%>
+  </div>
+  <div class="create-comment-button">
+    <%= form.submit "Submit", class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>

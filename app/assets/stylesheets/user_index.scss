@@ -1,842 +1,842 @@
-// /* line 1, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
-// html,
-// body,
-// ol,
-// .mdl-cell {
-//   font-size: 16px;
-//   line-height: 28px;
-// }
+/* line 1, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
+html,
+body,
+ol,
+.mdl-cell {
+  font-size: 16px;
+  line-height: 28px;
+}
 
-// /* line 11, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
-// .mdl-grid {
-//   padding: 0 !important;
-// }
+/* line 11, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
+.mdl-grid {
+  padding: 0 !important;
+}
 
-// /* line 15, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
-// a {
-//   cursor: pointer;
-// }
+/* line 15, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
+a {
+  cursor: pointer;
+}
 
-// /* line 19, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: DINPro-Regular !important;
-// }
+/* line 19, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_reset.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: DINPro-Regular !important;
+}
 
-// @font-face {
-//   font-family: DINPro-Light;
+@font-face {
+  font-family: DINPro-Light;
 
-// }
-// @font-face {
-//   font-family: DINPro-Regular;
+}
+@font-face {
+  font-family: DINPro-Regular;
 
-// }
-// @font-face {
-//   font-family: DINPro-Medium;
+}
+@font-face {
+  font-family: DINPro-Medium;
  
-// }
-// @font-face {
-//   font-family: DINPro-Bold;
+}
+@font-face {
+  font-family: DINPro-Bold;
 
-// }
-// /* line 3, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .flex {
-//   display: flex;
-// }
+}
+/* line 3, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.flex {
+  display: flex;
+}
 
-// /* line 7, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .flex-space-btw {
-//   justify-content: space-between;
-// }
+/* line 7, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.flex-space-btw {
+  justify-content: space-between;
+}
 
-// /* line 11, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-centered {
-//   margin: 0 auto;
-// }
+/* line 11, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-centered {
+  margin: 0 auto;
+}
 
-// /* line 15, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-primary {
-//   color: #fff;
-//   background-color: #3359db;
-// }
+/* line 15, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-primary {
+  color: #fff;
+  background-color: #3359db;
+}
 
-// /* line 20, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-success {
-//   color: #fff;
-//   background-color: #10A36D;
-// }
+/* line 20, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-success {
+  color: #fff;
+  background-color: #10A36D;
+}
 
-// /* line 25, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-circular {
-//   border-radius: 50%;
-// }
+/* line 25, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-circular {
+  border-radius: 50%;
+}
 
-// /* line 29, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .no-margin {
-//   margin: 0;
-// }
+/* line 29, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.no-margin {
+  margin: 0;
+}
 
-// /* line 33, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .no-padding-left {
-//   padding-left: 0;
-// }
+/* line 33, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.no-padding-left {
+  padding-left: 0;
+}
 
-// /* line 37, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-blue {
-//   color: #3359db;
-// }
+/* line 37, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-blue {
+  color: #3359db;
+}
 
-// /* line 41, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-capitalized {
-//   text-transform: capitalize;
-// }
+/* line 41, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-capitalized {
+  text-transform: capitalize;
+}
 
-// /* line 45, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
-// .is-black {
-//   color: #333e44;
-// }
+/* line 45, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/partials/_utilities.scss */
+.is-black {
+  color: #333e44;
+}
 
-// /* line 3, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating {
-//   min-height: 60.875rem;
-//   width: 70%;
-//   margin: 0px auto;
-//   border-radius: 0.375rem;
-//   background-color: #fff;
-//   box-shadow: 0rem 0.25rem 0.5625rem 0rem rgba(0, 0, 0, 0.05);
-//   margin-top: 9.375rem;
-//   font-family: "DINPro-Light";
-// }
-// /* line 13, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container {
-//   width: 80%;
-//   margin: 0rem auto;
-//   padding: 3.125rem;
-// }
-// /* line 19, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--title .primary {
-//   color: #3359db;
-//   font-size: 1.5rem;
-//   line-height: 1.9375rem;
-//   margin-bottom: 0.625rem;
-//   font-family: "DINPro-Medium";
-// }
-// /* line 27, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--title .secondary {
-//   display: block;
-//   color: #333e44;
-//   font-size: 0.875rem;
-//   line-height: 1.125rem;
-// }
-// /* line 34, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--title .back_image img {
-//   width: 1.5625rem;
-//   height: 1.5625rem;
-//   margin-bottom: 0.625rem;
-//   cursor: pointer;
-// }
-// /* line 41, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--title .instructions {
-//   margin-top: 0.9375rem;
-//   display: inline-block;
-//   color: #3359db;
-//   font-size: 0.875rem;
-//   line-height: 1.125rem;
-//   text-decoration: underline;
-//   cursor: pointer;
-// }
-// /* line 52, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main {
-//   margin-top: 3.125rem;
-// }
-// /* line 55, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .submit-btn {
-//   cursor: pointer;
-//   display: block;
-//   height: 1.875rem;
-//   width: 7.5rem;
-//   border-radius: 0.25rem;
-//   background-color: #10A36D;
-//   color: #fff;
-//   font-size: 0.875rem;
-//   text-align: center;
-//   margin-left: 2.5rem;
-//   margin-top: -1.875rem;
-// }
-// /* line 69, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question {
-//   margin-bottom: 3.125rem;
-// }
-// /* line 72, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--no {
-//   text-align: center;
-//   border-radius: 50%;
-//   background-color: #f4f8f9;
-//   color: #333e44;
-//   padding: 0rem 0.125rem 0.25rem 0.125rem;
-//   width: 1.25rem;
-//   height: 1.25rem;
-//   line-height: 1.6rem;
-//   display: inline-block;
-//   margin-right: 0.9375rem;
-//   font-size: 0.75rem;
-// }
-// /* line 86, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--title {
-//   color: #333e44;
-//   font-size: 1rem;
-//   line-height: 2.125rem;
-//   font-weight: 600;
-// }
-// /* line 93, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option {
-//   margin-left: 1.875rem;
-// }
-// /* line 96, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option input.answer-body {
-//   width: 30%;
-//   box-sizing: border-box;
-//   height: 2.5rem;
-//   border: 0.0625rem solid rgba(188, 188, 188, 0.4);
-//   border-radius: 0.3125rem;
-//   line-height: 2.125rem;
-//   font-size: 0.875rem;
-//   padding-left: 1rem;
-//   outline: none;
-//   background-color: #fff;
-//   margin-left: 0.625rem;
-// }
-// /* line 110, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .tr_row {
-//   background-color: #f0f4f5;
-//   border-radius: 3.125rem;
-//   padding: 0.3125rem;
-//   height: 2.75rem;
-// }
-// /* line 117, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option td:first-child {
-//   border-bottom-left-radius: 0.3125rem;
-//   border-top-left-radius: 0.3125rem;
-// }
-// /* line 123, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option td:last-child {
-//   border-top-right-radius: 0.3125rem;
-//   border-bottom-right-radius: 0.3125rem;
-// }
-// /* line 130, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .tr_row td:not(:first-child) {
-//   padding-left: 3.125rem;
-// }
-// /* line 134, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .tr_row td:first-child {
-//   padding-left: 1.25rem;
-// }
-// /* line 138, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .tr_row td:last-child {
-//   padding-right: 1.25rem;
-// }
-// /* line 143, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .table {
-//   border-collapse: separate;
-//   border-spacing: 0 0.3125rem;
-//   width: 100%;
-//   font-size: 0.875rem;
-// }
-// /* line 150, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .table-responsive {
-//   overflow: scroll;
-//   padding-left: 0.625rem;
-// }
-// /* line 155, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-container input {
-//   position: absolute;
-//   opacity: 0;
-//   cursor: pointer;
-//   height: 0;
-//   width: 0;
-// }
-// /* line 163, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-mark {
-//   position: relative;
-//   left: 0rem;
-//   border: 0.0575rem solid #B7BFCC;
-//   background-color: #fff;
-//   height: 1rem;
-//   width: 0.6875rem;
-//   padding: 0rem 0.4375rem 0rem 0.625rem;
-//   border-radius: 0.25rem;
-// }
-// /* line 174, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-container input:checked ~ .radio-mark {
-//   background-color: #333e44;
-// }
-// /* line 178, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-mark:after {
-//   content: "";
-//   display: none;
-//   position: absolute;
-// }
-// /* line 184, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-container input:checked ~ .radio-mark:after {
-//   display: block;
-// }
-// /* line 188, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question--option .radio-container .radio-mark:after {
-//   left: 0.3125rem;
-//   top: 0.0625rem;
-//   width: 0.3125rem;
-//   height: 0.625rem;
-//   border: solid #fff;
-//   border-width: 0rem 0.1875rem 0.1875rem 0rem;
-//   transform: rotate(45deg);
-// }
-// /* line 199, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question .answer {
-//   position: relative;
-//   text-align: left;
-//   position: relative;
-//   margin-bottom: 0.625rem;
-//   font-size: 0.875rem;
-//   padding: 0.5rem 0.9375rem 0.5rem 0.9375rem;
-//   border-radius: 0.375rem;
-// }
-// /* line 208, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question .answer .item-option {
-//   padding-left: 0.625rem;
-// }
-// /* line 213, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question input[type="radio"] {
-//   opacity: 0;
-//   cursor: pointer;
-// }
-// /* line 217, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question input[type="radio"]:checked ~ .custom-radio {
-//   border: 0.0625rem solid #000;
-// }
-// /* line 220, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question input[type="radio"]:checked ~ .custom-radio:after {
-//   display: block;
-// }
-// /* line 226, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question .custom-radio {
-//   top: 0.8125rem;
-//   position: absolute;
-//   pointer-events: none;
-//   background-color: #fff;
-//   border: 0.0625rem solid #ccc;
-//   border-radius: 50%;
-//   height: 1rem;
-//   width: 1rem;
-// }
-// /* line 236, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .learner_rating-container--main .question .custom-radio:after {
-//   content: "";
-//   display: none;
-//   top: 0.2375rem;
-//   left: 0.3rem;
-//   width: 0.5rem;
-//   height: 0.5rem;
-//   position: relative;
-//   border-radius: 50%;
-//   background: #000;
-// }
+/* line 3, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating {
+  min-height: 60.875rem;
+  width: 70%;
+  margin: 0px auto;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  box-shadow: 0rem 0.25rem 0.5625rem 0rem rgba(0, 0, 0, 0.05);
+  margin-top: 9.375rem;
+  font-family: "DINPro-Light";
+}
+/* line 13, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container {
+  width: 80%;
+  margin: 0rem auto;
+  padding: 3.125rem;
+}
+/* line 19, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--title .primary {
+  color: #3359db;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  margin-bottom: 0.625rem;
+  font-family: "DINPro-Medium";
+}
+/* line 27, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--title .secondary {
+  display: block;
+  color: #333e44;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+/* line 34, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--title .back_image img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  margin-bottom: 0.625rem;
+  cursor: pointer;
+}
+/* line 41, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--title .instructions {
+  margin-top: 0.9375rem;
+  display: inline-block;
+  color: #3359db;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 52, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main {
+  margin-top: 3.125rem;
+}
+/* line 55, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .submit-btn {
+  cursor: pointer;
+  display: block;
+  height: 1.875rem;
+  width: 7.5rem;
+  border-radius: 0.25rem;
+  background-color: #10A36D;
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-left: 2.5rem;
+  margin-top: -1.875rem;
+}
+/* line 69, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question {
+  margin-bottom: 3.125rem;
+}
+/* line 72, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--no {
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f4f8f9;
+  color: #333e44;
+  padding: 0rem 0.125rem 0.25rem 0.125rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.6rem;
+  display: inline-block;
+  margin-right: 0.9375rem;
+  font-size: 0.75rem;
+}
+/* line 86, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--title {
+  color: #333e44;
+  font-size: 1rem;
+  line-height: 2.125rem;
+  font-weight: 600;
+}
+/* line 93, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option {
+  margin-left: 1.875rem;
+}
+/* line 96, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option input.answer-body {
+  width: 30%;
+  box-sizing: border-box;
+  height: 2.5rem;
+  border: 0.0625rem solid rgba(188, 188, 188, 0.4);
+  border-radius: 0.3125rem;
+  line-height: 2.125rem;
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  outline: none;
+  background-color: #fff;
+  margin-left: 0.625rem;
+}
+/* line 110, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .tr_row {
+  background-color: #f0f4f5;
+  border-radius: 3.125rem;
+  padding: 0.3125rem;
+  height: 2.75rem;
+}
+/* line 117, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option td:first-child {
+  border-bottom-left-radius: 0.3125rem;
+  border-top-left-radius: 0.3125rem;
+}
+/* line 123, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option td:last-child {
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+}
+/* line 130, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .tr_row td:not(:first-child) {
+  padding-left: 3.125rem;
+}
+/* line 134, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .tr_row td:first-child {
+  padding-left: 1.25rem;
+}
+/* line 138, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .tr_row td:last-child {
+  padding-right: 1.25rem;
+}
+/* line 143, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .table {
+  border-collapse: separate;
+  border-spacing: 0 0.3125rem;
+  width: 100%;
+  font-size: 0.875rem;
+}
+/* line 150, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .table-responsive {
+  overflow: scroll;
+  padding-left: 0.625rem;
+}
+/* line 155, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* line 163, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-mark {
+  position: relative;
+  left: 0rem;
+  border: 0.0575rem solid #B7BFCC;
+  background-color: #fff;
+  height: 1rem;
+  width: 0.6875rem;
+  padding: 0rem 0.4375rem 0rem 0.625rem;
+  border-radius: 0.25rem;
+}
+/* line 174, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-container input:checked ~ .radio-mark {
+  background-color: #333e44;
+}
+/* line 178, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-mark:after {
+  content: "";
+  display: none;
+  position: absolute;
+}
+/* line 184, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-container input:checked ~ .radio-mark:after {
+  display: block;
+}
+/* line 188, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question--option .radio-container .radio-mark:after {
+  left: 0.3125rem;
+  top: 0.0625rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid #fff;
+  border-width: 0rem 0.1875rem 0.1875rem 0rem;
+  transform: rotate(45deg);
+}
+/* line 199, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question .answer {
+  position: relative;
+  text-align: left;
+  position: relative;
+  margin-bottom: 0.625rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.9375rem 0.5rem 0.9375rem;
+  border-radius: 0.375rem;
+}
+/* line 208, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question .answer .item-option {
+  padding-left: 0.625rem;
+}
+/* line 213, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question input[type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+}
+/* line 217, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question input[type="radio"]:checked ~ .custom-radio {
+  border: 0.0625rem solid #000;
+}
+/* line 220, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question input[type="radio"]:checked ~ .custom-radio:after {
+  display: block;
+}
+/* line 226, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question .custom-radio {
+  top: 0.8125rem;
+  position: absolute;
+  pointer-events: none;
+  background-color: #fff;
+  border: 0.0625rem solid #ccc;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+}
+/* line 236, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.learner_rating-container--main .question .custom-radio:after {
+  content: "";
+  display: none;
+  top: 0.2375rem;
+  left: 0.3rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  position: relative;
+  border-radius: 50%;
+  background: #000;
+}
 
-// /* line 253, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper {
-//   margin-top: 3rem;
-// }
-// /* line 256, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-container {
-//   width: 70%;
-//   margin: 0 auto;
-// }
-// /* line 261, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-modal {
-//   background: #fff;
-//   width: 100%;
-//   min-height: 26.25rem;
-// }
-// /* line 266, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-modal--has-shadow {
-//   box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
-// }
-// /* line 270, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-modal--has-radius {
-//   border-radius: 0.375rem;
-// }
-// /* line 275, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-content {
-//   padding: 1.25rem 5.0625rem 4rem;
-// }
-// /* line 278, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-content h4 {
-//   font-family: "DINPro-Medium" !important;
-//   font-weight: 500;
-//   text-align:center;
-// }
-// /* line 284, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   width: 100%;
-//   margin-top: 2.5rem;
-//   margin-left: -0.625rem;
-// }
-// /* line 289, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card {
-//   box-sizing: border-box;
-//   height: 15.125rem;
-//   width: 13rem;
-//   border: 0.0625rem solid rgba(178, 187, 198, 0.31);
-//   border-radius: 0.25rem;
-//   background-color: #FFFFFF;
-//   box-shadow: 0 0.25rem 0.5625rem 0 rgba(0, 0, 0, 0.05);
-//   padding: 1.4375rem;
-//   display: flex;
-//   flex-direction: column;
-//   border-radius: 0.9375rem;
-//   margin-bottom: 20px;
-// }
-// /* line 299, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card:hover {
-//   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-// }
-// /* line 303, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content {
-//   text-align: center;
-// }
-// /* line 306, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content .avatar {
-//   color: rgba(51, 62, 68, 0.52);
-//   margin: 1.5625rem 0rem;
-// }
-// /* line 310, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content .avatar h4 {
-//   font-size: 1.25rem;
-//   color: inherit;
-// }
-// /* line 316, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content .avatar-name {
-//   font-size: 1rem;
-//   font-family: "DINPro-Medium";
-// }
-// /* line 321, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content p {
-//   color: #333e44;
-//   margin: 0;
-// }
-// /* line 326, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .panelist-cards .panelist-card__content .card-info {
-//   font-size: 0.75rem;
-// }
-// /* line 332, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .continue-btn {
-//   height: 2.1875rem;
-//   width: 8.5rem;
-//   margin: auto;
-//   font-family: DINPro-Regular;
-//   background-color: #10A36D;
-//   color: #fff;
-//   text-align: center;
-//   border-radius: 0.375rem;
-//   padding-top: 0.25rem;
-//   cursor: pointer;
-// }
-// /* line 344, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .continue-btn.disabled {
-//   color: black;
-//   background-color: #d8d8d8;
-// }
-// /* line 350, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper section p {
-//   margin-bottom: -0.00625rem;
-//   color: #333E44;
-//   font-size: 0.875rem;
-//   line-height: 1.125rem;
-//   font-family: DINPro-light;
-// }
-// /* line 358, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper footer {
-//   margin-bottom: 1.875rem;
-// }
-// /* line 362, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .rating_instruction_modal {
-//   display: none;
-// }
-// /* line 366, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .rating_instruction_modal_style {
-//   display: flex;
-//   height: auto;
-//   max-height: 100%;
-//   z-index: 1010;
-//   width: 39.75rem;
-//   max-width: 100%;
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: white;
-//   border-radius: 8px;
-// }
-// /* line 381, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .rating_instruction_modal_wrapper {
-//   width: 65%;
-//   height: auto;
-//   margin: 2.75rem auto 2.3125rem auto;
-// }
-// /* line 387, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .rating_instruction {
-//   height: 1.625rem;
-//   width: 14.8125rem;
-//   color: #3359db;
-//   font-family: DINPro-Regular;
-//   font-size: 1.1875rem;
-//   font-weight: 800;
-//   letter-spacing: 0.05rem;
-//   text-align: center;
-//   margin: 0 auto;
-//   display: block;
-// }
-// /* line 400, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .modal-overlay-style {
-//   background: #000 !important;
-//   opacity: 0.5;
-//   z-index: 200;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
-// /* line 411, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .panelist-wrapper .close_modal {
-//   position: absolute;
-//   top: 0.925rem;
-//   right: 0.925rem;
-//   width: 1.25rem;
-//   height: 1.25rem;
-//   background: url(close.svg) no-repeat;
-//   cursor: pointer;
-// }
+/* line 253, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper {
+  margin-top: 3rem;
+}
+/* line 256, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-container {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 261, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-modal {
+  background: #fff;
+  width: 100%;
+  min-height: 26.25rem;
+}
+/* line 266, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-modal--has-shadow {
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.05);
+}
+/* line 270, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-modal--has-radius {
+  border-radius: 0.375rem;
+}
+/* line 275, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-content {
+  padding: 1.25rem 5.0625rem 4rem;
+}
+/* line 278, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-content h4 {
+  font-family: "DINPro-Medium" !important;
+  font-weight: 500;
+  text-align:center;
+}
+/* line 284, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-left: -0.625rem;
+}
+/* line 289, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card {
+  box-sizing: border-box;
+  height: 15.125rem;
+  width: 13rem;
+  border: 0.0625rem solid rgba(178, 187, 198, 0.31);
+  border-radius: 0.25rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.25rem 0.5625rem 0 rgba(0, 0, 0, 0.05);
+  padding: 1.4375rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+  margin-bottom: 20px;
+}
+/* line 299, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 303, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content {
+  text-align: center;
+}
+/* line 306, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content .avatar {
+  color: rgba(51, 62, 68, 0.52);
+  margin: 1.5625rem 0rem;
+}
+/* line 310, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content .avatar h4 {
+  font-size: 1.25rem;
+  color: inherit;
+}
+/* line 316, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content .avatar-name {
+  font-size: 1rem;
+  font-family: "DINPro-Medium";
+}
+/* line 321, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content p {
+  color: #333e44;
+  margin: 0;
+}
+/* line 326, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .panelist-cards .panelist-card__content .card-info {
+  font-size: 0.75rem;
+}
+/* line 332, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .continue-btn {
+  height: 2.1875rem;
+  width: 8.5rem;
+  margin: auto;
+  font-family: DINPro-Regular;
+  background-color: #10A36D;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.375rem;
+  padding-top: 0.25rem;
+  cursor: pointer;
+}
+/* line 344, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .continue-btn.disabled {
+  color: black;
+  background-color: #d8d8d8;
+}
+/* line 350, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper section p {
+  margin-bottom: -0.00625rem;
+  color: #333E44;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: DINPro-light;
+}
+/* line 358, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper footer {
+  margin-bottom: 1.875rem;
+}
+/* line 362, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .rating_instruction_modal {
+  display: none;
+}
+/* line 366, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .rating_instruction_modal_style {
+  display: flex;
+  height: auto;
+  max-height: 100%;
+  z-index: 1010;
+  width: 39.75rem;
+  max-width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+}
+/* line 381, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .rating_instruction_modal_wrapper {
+  width: 65%;
+  height: auto;
+  margin: 2.75rem auto 2.3125rem auto;
+}
+/* line 387, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .rating_instruction {
+  height: 1.625rem;
+  width: 14.8125rem;
+  color: #3359db;
+  font-family: DINPro-Regular;
+  font-size: 1.1875rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+/* line 400, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .modal-overlay-style {
+  background: #000 !important;
+  opacity: 0.5;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 411, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.panelist-wrapper .close_modal {
+  position: absolute;
+  top: 0.925rem;
+  right: 0.925rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url(close.svg) no-repeat;
+  cursor: pointer;
+}
 
-// /* line 422, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .rating_instruction_modal {
-//   display: none;
-// }
+/* line 422, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.rating_instruction_modal {
+  display: none;
+}
 
-// /* line 426, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .rating_instruction_modal_style {
-//   display: flex;
-//   height: auto;
-//   max-height: 100%;
-//   z-index: 1010;
-//   width: 39.75rem;
-//   max-width: 100%;
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: white;
-//   border-radius: 8px;
-// }
+/* line 426, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.rating_instruction_modal_style {
+  display: flex;
+  height: auto;
+  max-height: 100%;
+  z-index: 1010;
+  width: 39.75rem;
+  max-width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+}
 
-// /* line 441, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .rating_instruction_modal_wrapper {
-//   width: 65%;
-//   height: auto;
-//   margin: 2.75rem auto 2.3125rem auto;
-// }
+/* line 441, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.rating_instruction_modal_wrapper {
+  width: 65%;
+  height: auto;
+  margin: 2.75rem auto 2.3125rem auto;
+}
 
-// /* line 447, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .rating_instruction {
-//   height: 1.625rem;
-//   width: 14.8125rem;
-//   color: #3359db;
-//   font-family: DINPro-Regular;
-//   font-size: 1.1875rem;
-//   font-weight: 800;
-//   letter-spacing: 0.05rem;
-//   text-align: center;
-//   margin: 0 auto;
-//   display: block;
-// }
+/* line 447, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.rating_instruction {
+  height: 1.625rem;
+  width: 14.8125rem;
+  color: #3359db;
+  font-family: DINPro-Regular;
+  font-size: 1.1875rem;
+  font-weight: 800;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
 
-// /* line 460, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .modal-overlay-style {
-//   background: #000 !important;
-//   opacity: 0.5;
-//   z-index: 200;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-// }
+/* line 460, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.modal-overlay-style {
+  background: #000 !important;
+  opacity: 0.5;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-// /* line 471, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// .close_modal {
-//   position: absolute;
-//   top: 0.925rem;
-//   right: 0.925rem;
-//   width: 1.25rem;
-//   height: 1.25rem;
-//   background: url(close.svg) no-repeat;
-//   cursor: pointer;
-// }
+/* line 471, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+.close_modal {
+  position: absolute;
+  top: 0.925rem;
+  right: 0.925rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: url(close.svg) no-repeat;
+  cursor: pointer;
+}
 
-// @media only screen and (max-width: 800px) {
-//   /* line 483, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating {
-//     margin-top: 0.625rem;
-//     width: 90%;
-//   }
-//   /* line 488, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option {
-//     margin-left: 0rem;
-//   }
-//   /* line 491, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option input.answer-body {
-//     width: 90%;
-//   }
-//   /* line 495, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option .table {
-//     width: 150%;
-//   }
-//   /* line 499, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option .table-responsive {
-//     padding-left: 0rem;
-//   }
-//   /* line 504, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option .tr_row td:not(:first-child) {
-//     padding-left: 1.25rem;
-//   }
-//   /* line 508, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option .tr_row td:first-child {
-//     padding-left: 1.25rem;
-//   }
-//   /* line 512, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .question--option .tr_row td:last-child {
-//     padding-right: 1.25rem;
-//   }
-//   /* line 519, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .learner_rating .submit-btn {
-//     margin-left: 0rem;
-//   }
-// }
-// @media (min-width: 768px) and (max-width: 1024px) {
-//   /* line 526, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .panelist-wrapper .panelist-content {
-//     text-align: center;
-//   }
-//   /* line 529, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .panelist-wrapper .panelist-content .panelist-cards {
-//     width: 70%;
-//     margin: 0 auto;
-//   }
-// }
-// @media (min-width: 360px) and (max-width: 740px) {
-//   /* line 537, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .panelist-wrapper .panelist-content {
-//     text-align: center;
-//     padding: 1.25rem 2.0625rem 4rem;
-//   }
-//   /* line 541, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   .panelist-wrapper .panelist-content .panelist-cards {
-//     margin: 0 auto;
-//   }
-// }
-// /* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section {
-//   width: 95%;
-//   margin: 8.5em auto 0;
-//   position: relative;
-//   width: 75%;
-// }
-// @media only screen and (min-width: 320px) and (max-width: 480px) {
-//   /* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   #main-pitch-section {
-//     margin-top: -3.5em;
-//     width: 90%;
-//   }
-//   /* line 555, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   #main-pitch-section .line {
-//     margin-bottom: 0.625rem;
-//   }
-// }
-// @media only screen and (min-width: 481px) and (max-width: 900px) {
-//   /* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-//   #main-pitch-section {
-//     margin-top: -5.5em;
-//     width: 90%;
-//   }
-// }
-// /* line 565, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .switching-tabs {
-//   justify-content: flex-start;
-//   margin: 0 0 1.5625rem;
-// }
-// /* line 569, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .switching-tabs .mdl-tabs__tab {
-//   color: #3359db;
-//   font-weight: 500;
-//   text-align: center;
-//   height: 2.3125rem;
-//   width: 8.75rem;
-//   font-size: 0.9375rem;
-//   line-height: 1.25rem;
-//   padding: 0 0.75rem;
-//   border: 0.0625rem solid #3359db;
-//   border-radius: 0.25rem;
-//   box-sizing: border-box;
-// }
-// /* line 582, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .switching-tabs .mdl-tabs__tab::before {
-//   content: '';
-//   position: absolute;
-//   display: inline-block;
-//   width: 1.125rem;
-//   height: 1.125rem;
-//   border-radius: 50%;
-//   background-color: #F1F4FE;
-// }
-// /* line 592, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .switching-tabs .mdl-tabs__tab:first-child {
-//   margin-left: 0;
-//   margin-right: 0;
-// }
-// /* line 597, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .switching-tabs .mdl-tabs__tab.is-active {
-//   background: #3359db;
-//   color: #fff !important;
-//   border: 0.0625rem solid #3359db;
-// }
-// /* line 605, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .invite-report {
-//   margin: 0 0 1.5625rem;
-//   color: #333E44;
-//   font-size: 0.75rem;
-//   line-height: 0.9375rem;
-// }
-// /* line 612, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .mdl-tabs__panel {
-//   display: none;
-// }
-// /* line 616, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .mdl-tabs__panel.is-active {
-//   display: block;
-// }
-// /* line 620, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid {
-//   margin: auto;
-//   display: grid;
-//   grid-gap: 1.25rem;
-//   grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
-// }
-// /* line 626, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card {
-//   box-sizing: border-box;
-//   height: 15.125rem;
-//   width: 13rem;
-//   border: 0.0625rem solid rgba(178, 187, 198, 0.31);
-//   border-radius: 0.25rem;
-//   background-color: #FFFFFF;
-//   box-shadow: 0 0.25rem 0.5625rem 0 rgba(0, 0, 0, 0.05);
-//   padding: 1.4375rem;
-//   display: flex;
-//   margin: 0 auto;
-//   flex-direction: column;
-//   border-radius: 0.9375rem;
-// }
-// /* line 640, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body {
-//   position: relative;
-//   width: 100%;
-//   text-align: center;
-// }
-// /* line 645, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .more-icon {
-//   position: absolute;
-//   background-image: url(/assets/More-0b42512e7dedce5068c993c934f2f73c4bde9cd0a98e30e2cbb05677f108743b.svg);
-//   left: auto;
-//   right: 0;
-//   height: 1.25rem;
-//   width: 0.4375rem;
-//   background-repeat: no-repeat;
-//   align-self: center;
-//   margin: 0 0 0 auto;
-//   cursor: pointer;
-// }
-// /* line 658, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-img {
-//   background: #F9FAFB;
-//   height: 3.75rem;
-//   width: 3.75rem;
-//   border-radius: 50%;
-//   margin: auto;
-//   color: rgba(51, 62, 68, 0.52);
-//   line-height: 3.75rem;
-// }
-// /* line 667, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-img img {
-//   object-fit: cover;
-//   height: 100%;
-// }
-// /* line 673, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-name {
-//   color: #333E44;
-//   margin: 0.5625rem auto 0;
-//   line-height: 1.3125rem;
-//   font-size: 1rem;
-//   font-weight: bolder;
-// }
-// /* line 681, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-mail {
-//   color: #333E44;
-//   margin: 0.4375rem auto 0;
-//   line-height: 1.125rem;
-//   font-size: 0.875rem;
-// }
-// /* line 688, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-invite-time {
-//   color: #BCBCBC;
-//   font-style: italic;
-//   margin: 0.625rem auto 0;
-//   line-height: 1.125rem;
-//   font-size: 0.875rem;
-//   font-weight: 300;
-// }
-// /* line 697, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge,
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge-active {
-//   width: 100%;
-//   height: 1.9375rem;
-//   font-size: 0.8125rem;
-//   line-height: 1.0625rem;
-//   margin: 1.25rem auto 0;
-//   border-radius: 0.9375rem;
-//   line-height: 1.9375rem;
-// }
-// /* line 708, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge {
-//   background: #FAF9F7;
-//   color: #E79F27;
-// }
-// /* line 713, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
-// #main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge-active {
-//   background: #E9F7F1;
-//   color: #10A36D;
-// }
-// .oval img {
-//   height: 2.75rem;
-//   width: 2.75rem;
-//   border-radius: 50%;
-// }
+@media only screen and (max-width: 800px) {
+  /* line 483, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating {
+    margin-top: 0.625rem;
+    width: 90%;
+  }
+  /* line 488, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option {
+    margin-left: 0rem;
+  }
+  /* line 491, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option input.answer-body {
+    width: 90%;
+  }
+  /* line 495, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option .table {
+    width: 150%;
+  }
+  /* line 499, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option .table-responsive {
+    padding-left: 0rem;
+  }
+  /* line 504, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option .tr_row td:not(:first-child) {
+    padding-left: 1.25rem;
+  }
+  /* line 508, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option .tr_row td:first-child {
+    padding-left: 1.25rem;
+  }
+  /* line 512, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .question--option .tr_row td:last-child {
+    padding-right: 1.25rem;
+  }
+  /* line 519, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .learner_rating .submit-btn {
+    margin-left: 0rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* line 526, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .panelist-wrapper .panelist-content {
+    text-align: center;
+  }
+  /* line 529, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .panelist-wrapper .panelist-content .panelist-cards {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 360px) and (max-width: 740px) {
+  /* line 537, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .panelist-wrapper .panelist-content {
+    text-align: center;
+    padding: 1.25rem 2.0625rem 4rem;
+  }
+  /* line 541, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  .panelist-wrapper .panelist-content .panelist-cards {
+    margin: 0 auto;
+  }
+}
+/* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section {
+  width: 95%;
+  margin: 8.5em auto 0;
+  position: relative;
+  width: 75%;
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  #main-pitch-section {
+    margin-top: -3.5em;
+    width: 90%;
+  }
+  /* line 555, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  #main-pitch-section .line {
+    margin-bottom: 0.625rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  /* line 547, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+  #main-pitch-section {
+    margin-top: -5.5em;
+    width: 90%;
+  }
+}
+/* line 565, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .switching-tabs {
+  justify-content: flex-start;
+  margin: 0 0 1.5625rem;
+}
+/* line 569, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .switching-tabs .mdl-tabs__tab {
+  color: #3359db;
+  font-weight: 500;
+  text-align: center;
+  height: 2.3125rem;
+  width: 8.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  padding: 0 0.75rem;
+  border: 0.0625rem solid #3359db;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+/* line 582, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .switching-tabs .mdl-tabs__tab::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background-color: #F1F4FE;
+}
+/* line 592, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .switching-tabs .mdl-tabs__tab:first-child {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 597, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .switching-tabs .mdl-tabs__tab.is-active {
+  background: #3359db;
+  color: #fff !important;
+  border: 0.0625rem solid #3359db;
+}
+/* line 605, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .invite-report {
+  margin: 0 0 1.5625rem;
+  color: #333E44;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+/* line 612, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .mdl-tabs__panel {
+  display: none;
+}
+/* line 616, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .mdl-tabs__panel.is-active {
+  display: block;
+}
+/* line 620, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid {
+  margin: auto;
+  display: grid;
+  grid-gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+}
+/* line 626, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card {
+  box-sizing: border-box;
+  height: 15.125rem;
+  width: 13rem;
+  border: 0.0625rem solid rgba(178, 187, 198, 0.31);
+  border-radius: 0.25rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 0.25rem 0.5625rem 0 rgba(0, 0, 0, 0.05);
+  padding: 1.4375rem;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+}
+/* line 640, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+/* line 645, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .more-icon {
+  position: absolute;
+  background-image: url(/assets/More-0b42512e7dedce5068c993c934f2f73c4bde9cd0a98e30e2cbb05677f108743b.svg);
+  left: auto;
+  right: 0;
+  height: 1.25rem;
+  width: 0.4375rem;
+  background-repeat: no-repeat;
+  align-self: center;
+  margin: 0 0 0 auto;
+  cursor: pointer;
+}
+/* line 658, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-img {
+  background: #F9FAFB;
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 50%;
+  margin: auto;
+  color: rgba(51, 62, 68, 0.52);
+  line-height: 3.75rem;
+}
+/* line 667, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-img img {
+  object-fit: cover;
+  height: 100%;
+}
+/* line 673, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-name {
+  color: #333E44;
+  margin: 0.5625rem auto 0;
+  line-height: 1.3125rem;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+/* line 681, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-mail {
+  color: #333E44;
+  margin: 0.4375rem auto 0;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+}
+/* line 688, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-invite-time {
+  color: #BCBCBC;
+  font-style: italic;
+  margin: 0.625rem auto 0;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+/* line 697, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge,
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge-active {
+  width: 100%;
+  height: 1.9375rem;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  margin: 1.25rem auto 0;
+  border-radius: 0.9375rem;
+  line-height: 1.9375rem;
+}
+/* line 708, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge {
+  background: #FAF9F7;
+  color: #E79F27;
+}
+/* line 713, /Users/efeagare/Desktop/VOF/vof-tracker-2/app/assets/stylesheets/pitch.scss */
+#main-pitch-section .pitch-grid .pitch-persona-card .persona-card-body .persona-badge-active {
+  background: #E9F7F1;
+  color: #10A36D;
+}
+.oval img {
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 50%;
+}
 
-// .panelist-cards.mdl-grid a {
-//   text-decoration: none;
-// }
+.panelist-cards.mdl-grid a {
+  text-decoration: none;
+}

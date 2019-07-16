@@ -2,7 +2,9 @@
 
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :articles, dependent: :destroy
+  has_many :like_and_dislikes, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
                                   dependent:   :destroy
@@ -88,8 +90,8 @@ class User < ApplicationRecord
   def feed
     following_ids = "SELECT followed_id FROM relationships
                      WHERE  follower_id = :user_id"
-    Micropost.where("user_id IN (#{following_ids})
-                     OR user_id = :user_id", user_id: id)
+    # Micropost.where("user_id IN (#{following_ids})
+    #                  OR user_id = :user_id", user_id: id)
   end
 
   def follow(other_user)
@@ -103,6 +105,8 @@ class User < ApplicationRecord
   def following?(other_user)
     following.include?(other_user)
   end
+
+  
 
   private
 

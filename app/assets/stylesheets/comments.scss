@@ -1,0 +1,72 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+textarea#comment_body {
+  overflow: auto;
+  resize: none;
+  width: 100%;
+  padding: 5px;
+  border: unset;
+  border-bottom: 1px outset;
+  outline: none;
+}
+.comment-body{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-width: 1px;
+  border-top-color: #dadada;
+  border-right-color: #d8d8d8;
+  border-bottom-color: #cbcbcb;
+  border-left-color: #d8d8d8;
+}
+
+.comment-action{
+  display: flex;
+  justify-content: flex-end;
+
+  .delete-action {
+    margin-right: 20px;
+    background-color: #fce8e6;
+    padding: 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+    
+    a {
+      color:  #d93025;
+    }
+  }
+  .edit-action {
+    background-color: #e9f7f1;;
+    padding: 5px;
+    margin-top: 2px;
+    border-radius: 5px;
+
+    a {
+      color: #48ca92;;
+    }
+  }
+}
+
+.fa-thumbs-down {
+  display: inline-block;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1)
+}
+
+.article-likes {
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.thumps-down, .thumps-up{
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.thumps-down {
+  margin-left: 20px;
+}

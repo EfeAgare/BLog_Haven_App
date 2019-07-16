@@ -1,0 +1,13 @@
+<%= form_for(@article.like_and_dislikes.build, remote: true, url: like_path(@article.id, current_user.id)) do |f| %>
+  
+  <div class="like-button">
+  <% if @article.like_and_dislikes[0].like? %>
+  <label for="like-article"><i class="fas fa-thumbs-up" style="color: #007bff"></i> <span><%= @article.like_and_dislikes.where(status: "like").count %></span>
+  </label>
+  <% else %>
+  <label for="like-article"><i class="fas fa-thumbs-up"></i> <span><%= @article.like_and_dislikes.where(status: "like").count %></span>
+  </label>
+  <% end %>
+  <%= f.submit "submit", id: "like-article"%>
+  </div>
+<% end %>

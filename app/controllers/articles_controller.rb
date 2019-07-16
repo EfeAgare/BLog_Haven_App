@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
+  before_action :current_user,   only: %i[create edit new user_articles destroy]
 
   def new
     @article = Article.new
@@ -12,7 +13,6 @@ class ArticlesController < ApplicationController
     else
       @article = current_user.articles.new(article_params_without_avatar)
     end
-    binding.pry
     if @article.save
       flash[:success] = 'Article successfully created'
       redirect_to article_url(@article)
@@ -32,9 +32,19 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.update(article_params)
+    if !params[:avatar]
+      @article.remove_avatar!
+      @article.update(article_params_without_avatar)
+      redirect_to @article
+    elsif  article_params_avatar
+      @article.update(article_params_avatar)
       redirect_to @article
     else
+      message = ""
+      @article.errors.full_messages.map do |msg|
+        message += " #{msg}        "
+        flash[:error] = message
+      end
       render 'edit'
     end
   end
@@ -43,6 +53,22 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+
+  def user_articles
+    @articles = Article.where(user_id: params[:user_id])
+  end
+
+  def destroy
+      @article = Article.find_by(id: params[:id], user_id: current_user.id)
+      if @article
+        @article.destroy
+        flash[:success] = "Article deleted successfully"
+        redirect_to user_articles_path(current_user)
+      else
+       flash[:error] = "Article no found"
+       redirect_to user_articles_path(current_user)
+      end
+  end
   private
 
   def article_params_avatar

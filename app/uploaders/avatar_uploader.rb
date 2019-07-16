@@ -7,27 +7,29 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # storage :file
   # storage :fog
 
-  process :convert => 'png'
+  # process :save_content_type_and_size_in_model
 
-  version :standard do
-    process :resize_to_fill => [100, 150, :north]
-  end
+  # def save_content_type_and_size_in_model
+  #   model.content_type = avatar.content_type if avatar.content_type
+  #   model.file_size = avatar.size
+  # end
 
-  version :thumbnail do
-    resize_to_fit(50, 50)
-  end
+  # version :standard do
+  #   process :resize_to_fill => [100, 150, :north]
+  # end
+
+  # version :thumbnail do
+  #   resize_to_fit(50, 50)
+  # end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
 
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
-  def default_url
-    # For Rails 3.1+ asset pipeline compatibility:
-    # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
-  
-    # "/images/" + [version_name, "765-default-avatar.png"].compact.join('_')
-  end
+  # def default_url(*args)
+  #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+  # end
 
   # Process files as they are uploaded:
   # process scale: [200, 300]

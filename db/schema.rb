@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_151611) do
+ActiveRecord::Schema.define(version: 2019_07_16_161657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,24 @@ ActiveRecord::Schema.define(version: 2019_07_14_151611) do
     t.datetime "updated_at", null: false
     t.string "avatar"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.bigint "article_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_comments_on_article_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "like_and_dislikes", force: :cascade do |t|
+    t.integer "status"
+    t.bigint "user_id"
+    t.bigint "article_id"
+    t.index ["article_id"], name: "index_like_and_dislikes_on_article_id"
+    t.index ["user_id"], name: "index_like_and_dislikes_on_user_id"
   end
 
   create_table "microposts", force: :cascade do |t|
@@ -65,5 +83,9 @@ ActiveRecord::Schema.define(version: 2019_07_14_151611) do
   end
 
   add_foreign_key "articles", "users"
+  add_foreign_key "comments", "articles"
+  add_foreign_key "comments", "users"
+  add_foreign_key "like_and_dislikes", "articles"
+  add_foreign_key "like_and_dislikes", "users"
   add_foreign_key "microposts", "users"
 end

@@ -23,17 +23,26 @@ Rails.application.routes.draw do
 
   patch '/user/:id/upload', to: "users#uploadImage", as: "upload_picture"
 
-  resources :articles
+  resources :articles do
+    resources :comments
+    
+  end
+  get '/users/articles/:user_id', to: "articles#user_articles", as: 'user_articles'
   resources :users do
     member do
       get :following, :followers
     end
   end
   resources :account_activations, only: [:edit]
+  post '/user/article/like/:article_id/:user_id', to: "like_and_dislikes#like", as: 'like'
+  post '/user/article/dislike/:article_id/:user_id', to: "like_and_dislikes#dislike", as: 'dislike'
   resources :password_resets,     only: %i[new create edit update]
   resources :microposts
   resources :relationships,       only: [:create, :destroy]
+  
   post '/user/microposts', to: 'microposts#create_micropost'
   get '/users/microposts/:id', to: 'microposts#show_micropost', as: 'user_micropost'
   delete '/user/microposts/:id', to: 'microposts#destroy'
+
+  
 end

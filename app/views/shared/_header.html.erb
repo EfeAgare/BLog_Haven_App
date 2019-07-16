@@ -25,7 +25,7 @@
         <%= link_to 'Create Article', new_article_path, class:"nav-link" %>
       </li>
               <li ><%= link_to "Profile", current_user, class:"nav-link" %></li>
-              <li ><%= link_to "Micropost", user_micropost_path(current_user), class:"nav-link" %></li>
+             <!-- <li ><%= link_to "Micropost", user_micropost_path(current_user), class:"nav-link" %></li> -->
               <li ><%= link_to "Settings", '#' , class:"nav-link"%></li>
               <li class="divider"></li>
               <li >
@@ -33,7 +33,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li>
+       <!--  <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li> -->
+        <li class="nav-item"></li>
         <% else %>
       <li class="nav-item">
         <%= link_to 'Help', help_path, class:"nav-link" %>
