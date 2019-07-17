@@ -26,7 +26,6 @@ class LikeAndDislikesController < ApplicationController
     else
       dislike_params
     end
-    binding.pry
     respond_to do |format|
       format.html { redirect_to @article }
       format.js
