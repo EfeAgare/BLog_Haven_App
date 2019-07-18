@@ -8,6 +8,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Article.__elasticsearch__.create_index!(force: true)
 User.create!(name: 'Agare',
              email: 'knowledgeagare@gmail.com',
              password: 'agareefe',
@@ -18,72 +19,74 @@ User.create!(name: 'Agare',
              activated: true,
              activated_at: Time.zone.now)
 
-10.times do |n|
-  name  = Faker::Name.name
-  email = "ozone2day#{n + 1}@gmail.com"
-  password = 'password'
-  User.create!(name: name,
-               email: email,
-               password: password,
-               password_confirmation: password,
-               bio: 'I love what I do and I will keep doing it',
-               profession: 'Software Developer',
-               activated: true,
-               activated_at: Time.zone.now)
-end
+# 10.times do |n|
+#   name  = Faker::Name.name
+#   email = "ozone2day#{n + 1}@gmail.com"
+#   password = 'password'
+#   User.create!(name: name,
+#                email: email,
+#                password: password,
+#                password_confirmation: password,
+#                bio: 'I love what I do and I will keep doing it',
+#                profession: 'Software Developer',
+#                activated: true,
+#                activated_at: Time.zone.now)
+# end
 
-10.times do |n|
-  name  = Faker::Name.name
-  email = "agare#{n + 1}@gmail.com"
-  password = 'railsworking'
-  User.create!(name: name,
-               email: email,
-               password: password,
-               password_confirmation: password,
-               bio: 'I love what I do and I will keep doing it',
-               profession: 'Civil Engineer',
-               activated: true,
-               activated_at: Time.zone.now)
-end
+# 10.times do |n|
+#   name  = Faker::Name.name
+#   email = "agare#{n + 1}@gmail.com"
+#   password = 'railsworking'
+#   User.create!(name: name,
+#                email: email,
+#                password: password,
+#                password_confirmation: password,
+#                bio: 'I love what I do and I will keep doing it',
+#                profession: 'Civil Engineer',
+#                activated: true,
+#                activated_at: Time.zone.now)
+# end
 
-10.times do |n|
-  name  = Faker::Name.name
-  email = "efe4rails#{n + 1}@gmail.com"
-  password = 'victory'
-  User.create!(name: name,
-               email: email,
-               password: password,
-               password_confirmation: password,
-               bio: 'This is me, i love what I do',
-               profession: 'Electrical Engineer',
-               activated: true,
-               activated_at: Time.zone.now)
-end
+# 10.times do |n|
+#   name  = Faker::Name.name
+#   email = "efe4rails#{n + 1}@gmail.com"
+#   password = 'victory'
+#   User.create!(name: name,
+#                email: email,
+#                password: password,
+#                password_confirmation: password,
+#                bio: 'This is me, i love what I do',
+#                profession: 'Electrical Engineer',
+#                activated: true,
+#                activated_at: Time.zone.now)
+# end
 
-20.times do |n|
-  name  = Faker::Name.name
-  email = "regina4real#{n + 1}@gmail.com"
-  password = 'knowledge'
-  User.create!(name: name,
-               email: email,
-               password: password,
-               password_confirmation: password,
-               bio: '',
-               profession: 'Fashion designer',
-               activated: true,
-               activated_at: Time.zone.now)
-end
+# 20.times do |n|
+#   name  = Faker::Name.name
+#   email = "regina4real#{n + 1}@gmail.com"
+#   password = 'knowledge'
+#   User.create!(name: name,
+#                email: email,
+#                password: password,
+#                password_confirmation: password,
+#                bio: '',
+#                profession: 'Fashion designer',
+#                activated: true,
+#                activated_at: Time.zone.now)
+# end
 
-users = User.order(:created_at).take(6)
-10.times do
-  content = Faker::Lorem.sentence(70)
-  users.each { |user| user.microposts.create!(content: content) }
-end
+# users = User.order(:created_at).take(6)
+# 10.times do
+#   content = Faker::Lorem.sentence(70)
+#   users.each { |user| user.microposts.create!(content: content) }
+# end
 
-# Following relationships
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+# # Following relationships
+# users = User.all
+# user  = users.first
+# following = users[2..50]
+# followers = users[3..40]
+# following.each { |followed| user.follow(followed) }
+# followers.each { |follower| follower.follow(user) }
+
+

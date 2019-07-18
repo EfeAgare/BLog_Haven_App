@@ -1,3 +1,5 @@
+html, body{ height:100%; margin:0; }
+
 .navbar {
   padding: 1rem 6rem;
 }
@@ -120,10 +122,12 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
+ 
+    margin-top:auto; 
+    background-color: whitesmoke;
+    padding: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
   a {
     color: #555;
     &:hover {
@@ -141,4 +145,14 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+.navbar-expand-lg .navbar-collapse {
+
+  padding-right: 50px !important;
+}
+.nav {
+ 
+  padding-left: 20px !important;
+
 }

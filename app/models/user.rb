@@ -1,17 +1,24 @@
 # frozen_string_literal: true
 
+require 'elasticsearch/model'
+
 class User < ApplicationRecord
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
   has_many :microposts, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  after_save :index_articles_in_elasticsearch
+
   has_many :articles, dependent: :destroy
   has_many :like_and_dislikes, dependent: :destroy
-  has_many :active_relationships, class_name:  "Relationship",
-                                  foreign_key: "follower_id",
-                                  dependent:   :destroy
-  has_many :passive_relationships, class_name:  "Relationship",
-                                  foreign_key: "followed_id",
-                                  dependent:   :destroy     
-  
+  has_many :active_relationships, class_name: 'Relationship',
+                                  foreign_key: 'follower_id',
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name: 'Relationship',
+                                   foreign_key: 'followed_id',
+                                   dependent: :destroy
+
   has_many :following, through: :active_relationships,  source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
 
@@ -29,7 +36,12 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-  
+  # def as_indexed_json(options={})
+  #   as_json(
+  #     only: [:name, :avatar],
+  #     include: [:articles]
+  #   )
+  # end
 
   # Returns the hash digest of the given string.
   def self.digest(string)
@@ -86,7 +98,6 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-
   def feed
     following_ids = "SELECT followed_id FROM relationships
                      WHERE  follower_id = :user_id"
@@ -106,8 +117,6 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
-  
-
   private
 
   def downcase_email
@@ -118,4 +127,20 @@ class User < ApplicationRecord
     self.activation_token  = User.new_token
     self.activation_digest = User.digest(activation_token)
   end
+
+  def index_articles_in_elasticsearch
+    articles.find_each { |article| article.__elasticsearch__.index_document }
+  end
 end
+
+# Delete the previous articles index in Elasticsearch
+# User.__elasticsearch__.client.indices.delete index: User.index_name rescue nil
+
+# # Create the new index with the new mapping
+# User.__elasticsearch__.client.indices.create \
+#   index: User.index_name,
+#   body: { settings: User.includes(:user).settings.to_hash, mappings: User.includes(:user).mappings.to_hash }
+
+# #Index all article records from the DB to Elasticsearch
+
+# User.import

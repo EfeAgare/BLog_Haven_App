@@ -1,52 +1,54 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
- 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <%= link_to "Blog Haven", root_path, class: "navbar-brand" %>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input
-        class="form-control mr-sm-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <ul class="nav justify-content-end">
-      
-  
-    <% if logged_in? %>
-
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li class="nav-item">
-        <%= link_to 'Create Article', new_article_path, class:"nav-link" %>
-      </li>
-              <li ><%= link_to "Profile", current_user, class:"nav-link" %></li>
-             <!-- <li ><%= link_to "Micropost", user_micropost_path(current_user), class:"nav-link" %></li> -->
-              <li ><%= link_to "Settings", '#' , class:"nav-link"%></li>
-              <li class="divider"></li>
-              <li >
-                <%= link_to "Log out", logout_path, class:"nav-link", method: :delete %>
-              </li>
-            </ul>
-          </li>
-       <!--  <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li> -->
-        <li class="nav-item"></li>
-        <% else %>
-      <li class="nav-item">
-        <%= link_to 'Help', help_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Log in", login_path, class:"nav-link" %></li>
-      </li>
-        <% end %>
+  <!-- <div class="search-container search-box">
+      <span class="current-modifier modifier"></span>
+      <input type="search" id="search" class="search-input" autocomplete="off" placeholder="Search...."/>
+      <span class="search-icon"></span>
+      <div class="modifiers-list modifiers-dropdown" style="display: none">
+        <span class="modifier-error"></span>
+        <ul>
+          <li class="by-attribute">By: Article-title </li>
+          <li class="by-attribute">By: Article-body </li>
+          <li class="by-attribute">By: Author </li>
         </ul>
-    </form>
-  </div>
-   <button
+      </div>
+    </div> -->
+   <%= render "search/search"%>
+    <ul class="nav justify-content-end">
+      <% if logged_in? %>
+        <li class="dropdown nav-item">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+            Account <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <%= link_to 'Create Article', new_article_path, class:"nav-link" %>
+            </li>
+            <li ><%= link_to "Profile", current_user, class:"nav-link" %></li>
+            <!-- <li ><%= link_to "Micropost", user_micropost_path(current_user), class:"nav-link" %></li> -->
+            <li ><%= link_to "Settings", '#' , class:"nav-link"%></li>
+            <li class="divider"></li>
+            <li >
+              <%= link_to "Log out", logout_path, class:"nav-link", method: :delete %>
+            </li>
+          </ul>
+        </li>
+        <!--  <li class="nav-item"><%= link_to "Users", users_url, class:"nav-link"  %></li> -->
+        <li class="nav-item"></li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Help', help_path, class:"nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log in", login_path, class:"nav-link" %></li>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<button
     class="navbar-toggler"
     type="button"
     data-toggle="collapse"
@@ -55,6 +57,6 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <span class="navbar-toggler-icon"></span>
+</button>
 </nav>

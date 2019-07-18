@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :current_user
   def create
@@ -9,12 +11,11 @@ class CommentsController < ApplicationController
     end
   end
 
-
   def destroy
     @article = Article.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.destroy
-     respond_to do |format|
+    respond_to do |format|
       format.html { redirect_to @article }
       format.js
     end

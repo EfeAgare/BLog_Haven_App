@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
-  before_action :current_user,   only: %i[create edit new user_articles destroy]
+  before_action :current_user, only: %i[create edit new user_articles destroy]
 
   def new
     @article = Article.new
   end
 
   def create
-    if article_params_avatar
-      @article = current_user.articles.new(article_params_avatar)
-    else
-      @article = current_user.articles.new(article_params_without_avatar)
-    end
+    @article = if article_params_avatar
+                 current_user.articles.new(article_params_avatar)
+               else
+                 current_user.articles.new(article_params_without_avatar)
+               end
     if @article.save
       flash[:success] = 'Article successfully created'
       redirect_to article_url(@article)
     else
-      message = ""
+      message = ''
       @article.errors.full_messages.map do |msg|
         message += " #{msg}        "
         flash[:error] = message
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
       @article.update(article_params_avatar)
       redirect_to @article
     else
-      message = ""
+      message = ''
       @article.errors.full_messages.map do |msg|
         message += " #{msg}        "
         flash[:error] = message
@@ -53,22 +53,22 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
   def user_articles
     @articles = Article.where(user_id: params[:user_id])
   end
 
   def destroy
-      @article = Article.find_by(id: params[:id], user_id: current_user.id)
-      if @article
-        @article.destroy
-        flash[:success] = "Article deleted successfully"
-        redirect_to user_articles_path(current_user)
-      else
-       flash[:error] = "Article no found"
-       redirect_to user_articles_path(current_user)
-      end
+    @article = Article.find_by(id: params[:id], user_id: current_user.id)
+    if @article
+      @article.destroy
+      flash[:success] = 'Article deleted successfully'
+      redirect_to user_articles_path(current_user)
+    else
+      flash[:error] = 'Article no found'
+      redirect_to user_articles_path(current_user)
+    end
   end
+
   private
 
   def article_params_avatar
@@ -78,6 +78,7 @@ class ArticlesController < ApplicationController
       avatar: params[:avatar]
     }
   end
+
   def article_params_without_avatar
     {
       title: params[:title],

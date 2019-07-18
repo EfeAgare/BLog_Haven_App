@@ -22,5 +22,4 @@ class ApplicationController < ActionController::Base
       flash[:danger] = 'You can perform this action'
     end
   end
-
 end

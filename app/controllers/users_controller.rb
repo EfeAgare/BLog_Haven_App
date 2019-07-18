@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def index
     # @users = User.where(activated: true).paginate(page: params[:page],
-                                                  # per_page: 12)
+    # per_page: 12)
   end
 
   def new
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
         redirect_to @user
         flash[:success] = 'Profile Image changed successfully'
       else
-        flash[:error] = "Error in Image upload"
+        flash[:error] = 'Error in Image upload'
       end
     end
   end
@@ -62,14 +62,14 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = "Following"
+    @title = 'Following'
     @user  = User.find(params[:id])
     @users = @user.following.paginate(page: params[:page], per_page: 5)
     render 'show_follow'
   end
 
   def followers
-    @title = "Followers"
+    @title = 'Followers'
     @user  = User.find(params[:id])
     @users = @user.followers.paginate(page: params[:page], per_page: 5)
     render 'show_follow'

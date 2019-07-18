@@ -1,0 +1,72 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.search-container {
+  display: inline-block;
+  position: relative;
+  border: 1px solid gray;
+  border-right: unset;
+  border-radius: 15px;
+  
+  padding-left: 30px;
+  width: 400px;
+  height: 30px;
+
+  .search-input {
+    height: 20px;
+    border: none;
+    box-sizing: border-box;
+    padding-right: 20px;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+    width: 250px;
+    font-family: gray;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 7px;
+    font-size: 20px;
+    right: 14px;
+    color: #e2e2e2;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image: image-url("search.svg");
+  }
+}
+
+.modifiers-dropdown {
+  left: 0;
+  top: 35px;
+  z-index: 2;
+  width: 200px;
+  display: none;
+  border-radius: 4px;
+  background: white;
+  position: absolute;
+  padding-left: 15px;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.12);
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    font-size: 12px;
+    list-style: none;
+
+    &:hover {
+      color: blue($color: #000000);
+    }
+  }
+}
+
+.modifier {
+  font-size: 11px;
+}
