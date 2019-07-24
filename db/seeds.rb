@@ -9,6 +9,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Article.__elasticsearch__.create_index!(force: true)
+
 User.create!(name: 'Agare',
              email: 'knowledgeagare@gmail.com',
              password: 'agareefe',
