@@ -1,6 +1,6 @@
 <div class="personal-articles">
   
-      <% if @count %>
+      <% if @count >= 1 %>
       <div style="text-align: center">
         About <%= @count %> result <%= 's' if @count > 1 %> for <strong><%= @query %></strong>
       </div>
