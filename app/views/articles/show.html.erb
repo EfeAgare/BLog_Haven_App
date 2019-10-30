@@ -25,12 +25,14 @@
   <div class="article-body"><%= sanitize @article.content %>
   </div>
   <div class="article-likes">
+   <% if current_user %>
     <div class="thumps-up">
       <%= render 'articles/like' %>
     </div>
     <div class="thumps-down">
       <%= render 'articles/dislike' %>
     </div>
+    <% end %>
   </div>
   <section class="comment-section">
     <div class="container pt-5 pb-5">
@@ -38,6 +40,7 @@
       <hr>
     </div>
      
+  
     <% if @article.comments.length != 0 %>
     <% @article.comments.map do |comment| %>
       <div class="comment-body" style="padding:10px;  border-style: solid;">
@@ -62,7 +65,9 @@
     <span></span>
     <% end %>
   </section>
+    <% if current_user %>
    <div class="create-comment">
       <%= render 'articles/comment_form' %>
     </div>
+    <% end %>
 </div>
