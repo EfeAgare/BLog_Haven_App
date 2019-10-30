@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.includes(:comments).order("comments.created_at asc").find(params[:id])
   end
 
   def user_articles

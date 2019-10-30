@@ -1,0 +1,73 @@
+<div class = 'postArticle '>
+  <div class="title-section">
+    <h1><%= @article.title%></h1>
+    <div class="article-info">
+      <div class="user-article-image rounded-circle"
+                  style="background-image: url(<%= @article.user.avatar %>); background-size:cover;"
+            >
+      </div>
+      <div class="article-author">
+        written by <%= @article.user.name %>
+      </div>
+    </div>
+    <div class="time-and-date">
+      <p class="date-created"><%= local_time(@article.created_at, '%B %e, %Y')%>.</p>
+      <p class="time-to-read"></p>
+    </div>
+  </div>
+  <div class="article-image-display">
+    <% if  @article.avatar.present? %>
+      <img src=" <%= @article.avatar %>" alt="">
+    <% else %>
+      <img src="https://readingagency.org.uk/news/male%20hands%20and%20book.jpg" alt="">
+    <% end %>
+  </div>
+  <div class="article-body"><%= sanitize @article.content %>
+  </div>
+  <div class="article-likes">
+   <% if current_user %>
+    <div class="thumps-up">
+      <%= render 'articles/like' %>
+    </div>
+    <div class="thumps-down">
+      <%= render 'articles/dislike' %>
+    </div>
+    <% end %>
+  </div>
+  <section class="comment-section">
+    <div class="container pt-5 pb-5">
+      <h2>Comments</h2>
+      <hr>
+    </div>
+     
+  
+    <% if @article.comments.length != 0 %>
+    <% @article.comments.map do |comment| %>
+      <div class="comment-body" style="padding:10px;  border-style: solid;">
+        <div class="comment-body-one">
+          <%= comment.body %>
+        </div>
+        <% if comment.user_id == current_user.id %>
+          <div class="comment-action">
+            <div class="delete-action">
+              <%= link_to 'Destroy', [comment.article, comment],
+              html: {method: :delete },
+              data: { confirm: 'Are you sure?' }, remote: true %>
+            </div>
+            <div class="edit-action">
+              <%= link_to 'Edit', [comment.article, comment] %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% else %>
+    <span></span>
+    <% end %>
+  </section>
+    <% if current_user %>
+   <div class="create-comment">
+      <%= render 'articles/comment_form' %>
+    </div>
+    <% end %>
+</div>
