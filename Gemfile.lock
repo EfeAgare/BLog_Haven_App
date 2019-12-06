@@ -197,7 +197,7 @@ GEM
     public_suffix (3.1.0)
     public_uid (1.3.0)
       orm_adapter (~> 0.5)
-    puma (3.12.1)
+    puma (3.12.2)
     quilljs-rails (0.0.4)
     rack (2.0.7)
     rack-test (1.1.0)
@@ -347,7 +347,7 @@ DEPENDENCIES
   pg (~> 1.1)
   pry (~> 0.12.2)
   public_uid
-  puma (~> 3.11)
+  puma (~> 3.12)
   quilljs-rails
   rails (~> 5.2.3)
   rails-controller-testing
