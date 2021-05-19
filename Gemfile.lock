@@ -169,7 +169,9 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
-    mimemagic (0.3.3)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -197,7 +199,8 @@ GEM
     public_suffix (3.1.0)
     public_uid (1.3.0)
       orm_adapter (~> 0.5)
-    puma (3.12.1)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     quilljs-rails (0.0.4)
     rack (2.0.7)
     rack-test (1.1.0)
@@ -347,7 +350,7 @@ DEPENDENCIES
   pg (~> 1.1)
   pry (~> 0.12.2)
   public_uid
-  puma (~> 3.11)
+  puma (~> 4.3)
   quilljs-rails
   rails (~> 5.2.3)
   rails-controller-testing
